@@ -14,29 +14,24 @@ def find_iframe_have_string(string):
     # move to default frame
     driver.switch_to.default_content()
 
-    # reCaptcha_iframe_number 가 계속 -1이면 해당 문자열 가진 iframe 찾지 못한 것
-    reCaptcha_iframe_number = -1
+    # iframe_number 가 계속 -1이면 해당 문자열 가진 iframe 찾지 못한 것
+    iframe_number = -1
     for i, iframe in enumerate(iframes):
         try:
             # move to frame one by one
             driver.switch_to.frame(iframes[i])
-
+            print(driver.page_source)
             # see iframe source
             if string in driver.page_source:
-                reCaptcha_iframe_number = i
+                iframe_number = i
 
-            # move to default frame
-            driver.switch_to.default_content()
         except:
-            # move to default frame
-            driver.switch_to.default_content()
             print('pass by except : iframes[%d]' % i)
             pass
-
-    if reCaptcha_iframe_number == -1:
+    if iframe_number == -1:
         return -1
     else:
-        return reCaptcha_iframe_number
+        return iframe_number
 
 
 def find_reCaptcha_string():
@@ -71,20 +66,66 @@ def find_reCaptcha_string():
                     return
 
 
+# element_name에 value를 입력
+# 성공 0, 실패 -1
+def input_user_info(element_name, value):
+    try:
+        gmarket_source = driver.page_source  # 해당 iframe 의 소스코드 문자열
+        soup = BeautifulSoup(gmarket_source, "html.parser")  # BeautifulSoup 클래스로 생성
+        driver.find_element_by_name(element_name).send_keys(value)
+        return 0
+    except:
+        print("Can't access %s", element_name)
+        return -1
+
+
+def input_Gmarket_user_info():
+    print("input_Gmarket_user_info() 실행")
+    while True:
+        print("-----------------")
+        time.sleep(2)
+        try:
+            # 여기서 속도가 매우 느려지는데 멀티 프로세싱을 통해 단축 시킬 수 있다.
+            iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
+                                                  "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
+            driver.switch_to.frame(iframe)
+        except:
+            print("iframe이 존재하지 않거나 접근할 수 없음")
+            continue
+        print("ID 입력")
+        u_name = 1
+        if u_name != 0:
+            u_name = input_user_info('u_name', 'test_id')
+
+        print("생년월일 입력")
+        birth_date = 1
+        if birth_date != 0:
+            birth_date = input_user_info('birth_date', '19950514')
+
+        print("휴대폰 번호 입력")
+        cellphone_num = 1
+        if cellphone_num != 0:
+            cellphone_num = input_user_info('cellphone_num', '01025012866')
+
+
 # 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
 # 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
-os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
+try:
+    os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
+except:
+    print("크롬을 찾을 수 없음")
+    exit()
+print(1)
 
 # -- setting -- #
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 chrome_driver = "B:\\sm051\\Desktop\\Break Captcha\\chromedriver"    # chrome_driver 위치
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
+print(2)
 
-# 웹페이지 이동
-time.sleep(1)
-# driver.get("https://patrickhlauke.github.io/recaptcha/")
-time.sleep(1)
-# 현재 페이지 내의 모든 iframe 불러오기
-iframes = driver.find_elements_by_tag_name('iframe')
-find_reCaptcha_string()
+# 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
+driver.get("https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
+print(3)
+input_Gmarket_user_info()
+
