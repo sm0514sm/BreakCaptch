@@ -6,32 +6,6 @@ import os
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-
-
-# string 문자열이 포함되어있는 iframe 을 찾아 iframes 의 Number 로 사용할 수 있게 해줌
-def find_iframe_have_string(string):
-    # move to default frame
-    driver.switch_to.default_content()
-
-    # iframe_number 가 계속 -1이면 해당 문자열 가진 iframe 찾지 못한 것
-    iframe_number = -1
-    for i, iframe in enumerate(iframes):
-        try:
-            # move to frame one by one
-            driver.switch_to.frame(iframes[i])
-            print(driver.page_source)
-            # see iframe source
-            if string in driver.page_source:
-                iframe_number = i
-
-        except:
-            print('pass by except : iframes[%d]' % i)
-            pass
-    if iframe_number == -1:
-        return -1
-    else:
-        return iframe_number
 
 
 # element_name에 value를 입력
