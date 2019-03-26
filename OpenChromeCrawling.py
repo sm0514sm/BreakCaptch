@@ -72,18 +72,18 @@ def find_reCaptcha_string():
 
 
 # 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
-os.popen("cd C:\\Program Files (x86)\\Google\\Chrome\\Application && chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:/ChromeTEMP\"")
+# 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
+os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
 
 # -- setting -- #
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-
-chrome_driver = "C:\\Users\\LGPC\\Desktop\\상민\\chromedriver"    # chrome_driver 위치
+chrome_driver = "B:\\sm051\\Desktop\\Break Captcha\\chromedriver"    # chrome_driver 위치
 driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
 # 웹페이지 이동
 time.sleep(1)
-#driver.get("https://patrickhlauke.github.io/recaptcha/")
+# driver.get("https://patrickhlauke.github.io/recaptcha/")
 time.sleep(1)
 # 현재 페이지 내의 모든 iframe 불러오기
 iframes = driver.find_elements_by_tag_name('iframe')
