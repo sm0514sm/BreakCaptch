@@ -34,44 +34,10 @@ def find_iframe_have_string(string):
         return iframe_number
 
 
-def find_reCaptcha_string():
-    while True:
-        # 현재 페이지 내의 모든 iframe 불러오기
-        global iframes
-        iframes = driver.find_elements_by_tag_name('iframe')
-        time.sleep(3)
-        iframe_number = find_iframe_have_string("reCAPTCHA")
-        if iframe_number == -1:
-            print("reCaptcha frame 찾을 수 없음")
-        else:
-            # 찾은 iframe_number 의 iframe 으로 이동
-            driver.switch_to.frame(iframes[iframe_number])
-
-            reCaptcha_source = driver.page_source                                       # 해당 iframe 의 소스코드 문자열
-            soup = BeautifulSoup(reCaptcha_source, "html.parser")                       # BeautifulSoup 클래스로 생성
-            divs = soup.findAll('div', {"class": "rc-imageselect-desc-no-canonical"})   # <div class="rc-..."> 인 것들 찾기
-            grids = soup.findAll('div', {"class": "rc-imageselect-target"})
-            # 3 X 3, 2 X 4 여러개 그림 중에서 특정 단어 일치하는 것들 선택
-            if len(divs) == 0:
-                divs = soup.findAll('div', {"class": "rc-imageselect-desc"})            # <div class="rc-..."> 인 것들 찾기
-                if len(divs) == 0:
-                    print("reCaptcha class 찾을 수 없음")
-                    continue
-            for grid in grids:
-                print(grid.get_text())
-            for div in divs:                    # 찾은 <div>들 각각
-                strongs = div.select('strong')  # <strong> 태그 모두 찾기
-                for strong in strongs:
-                    print(strong.get_text())
-                    return
-
-
 # element_name에 value를 입력
 # 성공 0, 실패 -1
 def input_user_info(element_name, value):
     try:
-        gmarket_source = driver.page_source  # 해당 iframe 의 소스코드 문자열
-        soup = BeautifulSoup(gmarket_source, "html.parser")  # BeautifulSoup 클래스로 생성
         driver.find_element_by_name(element_name).send_keys(value)
         return 0
     except:
@@ -95,37 +61,51 @@ def input_Gmarket_user_info():
         print("ID 입력")
         u_name = 1
         if u_name != 0:
-            u_name = input_user_info('u_name', 'test_id')
+            u_name = input_user_info('u_name', user_info["name"])
 
         print("생년월일 입력")
         birth_date = 1
         if birth_date != 0:
-            birth_date = input_user_info('birth_date', '19950514')
+            birth_date = input_user_info('birth_date', user_info["생년월일"])
 
         print("휴대폰 번호 입력")
         cellphone_num = 1
         if cellphone_num != 0:
-            cellphone_num = input_user_info('cellphone_num', '01025012866')
+            cellphone_num = input_user_info('cellphone_num', user_info["휴대폰번호"])
+
+
+user_info = {
+    "name": "이상민",
+    "국적": "내국인",
+    "생년월일": "19950516",
+    "성별": "남자",
+    "통신사": "SKT",
+    "휴대폰번호": "01025012866",
+    "자동입력방지문자": "",
+}
 
 
 # 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
 # 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
 try:
-    os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
+    os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && "
+             "chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
 except:
     print("크롬을 찾을 수 없음")
     exit()
-print(1)
 
 # -- setting -- #
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-chrome_driver = "B:\\sm051\\Desktop\\Break Captcha\\chromedriver"    # chrome_driver 위치
-driver = webdriver.Chrome(chrome_driver, options=chrome_options)
-print(2)
+try:
+    chrome_driver = "B:\\sm051\\Desktop\\Break Captcha\\chromedriver"    # chrome_driver 위치
+    driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
-# 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
-driver.get("https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
-print(3)
-input_Gmarket_user_info()
+    # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
+    driver.get(
+        "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
+    input_Gmarket_user_info()
+except:
+    print("크롬 드라이버를 찾을 수 없음")
+    exit()
 
