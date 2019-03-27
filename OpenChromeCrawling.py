@@ -35,7 +35,7 @@ def input_Gmarket_user_info():
         print("ID 입력")
         u_name = 1
         if u_name != 0:
-            u_name = input_user_info('u_name', user_info["name"])
+            u_name = input_user_info('u_name', user_info["이름"])
 
         print("생년월일 입력")
         birth_date = 1
@@ -48,8 +48,18 @@ def input_Gmarket_user_info():
             cellphone_num = input_user_info('cellphone_num', user_info["휴대폰번호"])
 
 
+def set_user_info(name, nationality, birth_date, gender, mobile_carrier, mobile_number, string):
+    global user_info
+    user_info["이름"] = name
+    user_info["국적"] = nationality
+    user_info["생년월일"] = birth_date
+    user_info["성별"] = gender
+    user_info["통신사"] = mobile_carrier
+    user_info["휴대폰번호"] = mobile_number
+
+
 user_info = {
-    "name": "이상민",
+    "이름": "이상민",
     "국적": "내국인",
     "생년월일": "19950516",
     "성별": "남자",

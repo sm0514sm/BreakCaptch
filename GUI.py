@@ -55,7 +55,7 @@ class LogInDialog(QDialog):
         self.setLayout(layout)
 
     def onActivated(self, text):
-        # 선택된 옵션 메인창의 label로 넘기기 <-수정
+        # TODO 선택된 옵션 메인창의 label로 넘기기 <-수정
         #self.nation = cb.text()
         #self.lbl.adjustSize()
         print('combooooo')
@@ -64,6 +64,7 @@ class LogInDialog(QDialog):
         self.id = self.lineEdit1.text()
         self.password = self.lineEdit2.text()
         self.phone = self.lineEdit3.text()
+        OpenChromeCrawling.set_user_info(self.id, 0, self.password, self.phone, 0, 0, 0)
         self.close()
 
 
