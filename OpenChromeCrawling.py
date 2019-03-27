@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-# element_name에 value를 입력
+# element_name 에 value 를 입력
 # 성공 0, 실패 -1
 def input_user_info(element_name, value):
     try:
@@ -30,7 +30,7 @@ def input_Gmarket_user_info():
                                                   "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
             driver.switch_to.frame(iframe)
         except:
-            print("iframe이 존재하지 않거나 접근할 수 없음")
+            print("iframe 이 존재하지 않거나 접근할 수 없음")
             continue
         print("ID 입력")
         u_name = 1
@@ -72,7 +72,7 @@ except:
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 try:
-    chrome_driver = "B:\\sm051\\Desktop\\Break Captcha\\chromedriver"    # chrome_driver 위치
+    chrome_driver = "C:\\Users\\LGPC\\Desktop\\상민\\chromedriver"    # chrome_driver 위치
     driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
     # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
