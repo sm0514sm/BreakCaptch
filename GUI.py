@@ -1,8 +1,10 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
+import OpenChromeCrawling
 
-#개인정보입력 창
+
+# 개인정보입력 창
 class LogInDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -15,9 +17,9 @@ class LogInDialog(QDialog):
     def setupUI(self):
         self.setGeometry(1100, 200, 300, 100)
         self.setWindowTitle("개인정보 입력")
-        #self.setWindowIcon(QIcon('icon.png'))
+        # self.setWindowIcon(QIcon('icon.png'))
 
-        #라벨링
+        # 라벨링
         label1 = QLabel("이름: ")
         label2 = QLabel("생년월일: ")
         label3 = QLabel("휴대폰번호: ")
@@ -26,22 +28,22 @@ class LogInDialog(QDialog):
         self.lineEdit1 = QLineEdit()
         self.lineEdit2 = QLineEdit()
         self.lineEdit3 = QLineEdit()
-        #콤보박스 - 내국인외국인
+        # 콤보박스 - 내국인외국인
         cb = QComboBox(self)
         cb.addItems(["내국인", "외국인"])
         cb.currentTextChanged.connect(self.onActivated)
         self.setWindowTitle('QComboBox')
-        #라디오버튼 - 남여
+        # 라디오버튼 - 남여
         self.rbtn1 = QRadioButton('남', self)
         self.rbtn2 = QRadioButton('여', self)
-        #확인 버튼
+        # 확인 버튼
         self.pushButton1= QPushButton("확인")
         self.pushButton1.clicked.connect(self.pushButtonClicked)
 
         layout = QGridLayout()
         layout.addWidget(label1, 0, 0)
         layout.addWidget(self.lineEdit1, 0, 1)
-        #콤보박스
+        # 콤보박스
         layout.addWidget(cb, 0, 2)
         layout.addWidget(label2, 1, 0)
         layout.addWidget(self.lineEdit2, 1, 1)
@@ -64,7 +66,8 @@ class LogInDialog(QDialog):
         self.phone = self.lineEdit3.text()
         self.close()
 
-#메인창
+
+# 메인창
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -73,7 +76,7 @@ class MyWindow(QWidget):
     def setupUI(self):
         self.setGeometry(800, 200, 300, 300)
         self.setWindowTitle("R U Robot")
-        #self.setWindowIcon(QIcon('icon.png'))
+        # self.setWindowIcon(QIcon('icon.png'))
 
         self.pushButton1 = QPushButton("개인정보 입력")
         self.pushButton1.clicked.connect(self.openPersonalInformation)
@@ -88,7 +91,7 @@ class MyWindow(QWidget):
 
         self.setLayout(layout)
 
-    #개인정보 입력 창 띄우기
+    # 개인정보 입력 창 띄우기
     def openPersonalInformation(self):
         dlg = LogInDialog()
         dlg.exec_()
@@ -99,6 +102,8 @@ class MyWindow(QWidget):
 
     # 크롬 열기
     def openCrome(self):
+        OpenChromeCrawling.do_crawling()
+        # TODO do_crawling()이 돌아가는 동안 GUI 가 완전히 먹통됨 >> do_crawling 을 subprocess 로 작동 필요
         print('열려라 디버깅크롬크롬')
             
 

@@ -59,27 +59,33 @@ user_info = {
 }
 
 
-# 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
-# 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
-try:
-    os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && "
-             "chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
-except:
-    print("크롬을 찾을 수 없음")
-    exit()
+driver = 0
+print("driver 선언")
 
-# -- setting -- #
-chrome_options = Options()
-chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-try:
-    chrome_driver = "C:\\Users\\LGPC\\Desktop\\상민\\chromedriver"    # chrome_driver 위치
-    driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
-    # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
-    driver.get(
-        "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
-    input_Gmarket_user_info()
-except:
-    print("크롬 드라이버를 찾을 수 없음")
-    exit()
+def do_crawling():
+    # 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
+    # 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
+    try:
+        os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && "
+                 "chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
+    except:
+        print("크롬을 찾을 수 없음")
+        exit()
+
+    # -- setting -- #
+    chrome_options = Options()
+    chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+    try:
+        global driver
+        chrome_driver = "C:\\Users\\LGPC\\Desktop\\상민\\chromedriver"    # chrome_driver 위치
+        driver = webdriver.Chrome(chrome_driver, options=chrome_options)
+
+        # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
+        driver.get(
+            "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
+        input_Gmarket_user_info()
+    except:
+        print("크롬 드라이버를 찾을 수 없음")
+        exit()
 
