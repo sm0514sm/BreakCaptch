@@ -6,17 +6,18 @@ import os
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import Select
 
 
 # element_name 에 value 를 입력
-# 성공 0, 실패 -1
+# 성공 1, 실패 0
 def input_user_info(element_name, value):
     try:
         driver.find_element_by_name(element_name).send_keys(value)
-        return 0
+        return 1
     except:
         print("Can't access %s", element_name)
-        return -1
+        return 0
 
 
 def input_Gmarket_user_info():
@@ -25,37 +26,53 @@ def input_Gmarket_user_info():
         print("-----------------")
         time.sleep(2)
         try:
-            # 여기서 속도가 매우 느려지는데 멀티 프로세싱을 통해 단축 시킬 수 있다.
+            # TODO 여기서 속도가 매우 느려지는데 멀티 프로세싱을 통해 단축 시킬 수 있다.
             iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
                                                   "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
             driver.switch_to.frame(iframe)
         except:
             print("iframe 이 존재하지 않거나 접근할 수 없음")
             continue
-        print("ID 입력")
-        u_name = 1
-        if u_name != 0:
-            u_name = input_user_info('u_name', user_info["이름"])
+
+        print("이름 입력")
+        if not input_user_info('u_name', user_info["이름"]):
+            print("이름 입력 실패")
+
+        print("국적 combobox 선택")
+        select = Select(driver.find_element_by_name('naSelect'))
+        select.select_by_visible_text('외국인')
 
         print("생년월일 입력")
-        birth_date = 1
-        if birth_date != 0:
-            birth_date = input_user_info('birth_date', user_info["생년월일"])
+        if not input_user_info('birth_date', user_info["생년월일"]):
+            print("생년월일 입력 실패")
+
+        print("성별 선택")
+        sel_area = 1
+        # TODO 성별 radio button 선택하도록
+
+        print("통신사 선택")
+        select = Select(driver.find_element_by_name('carrier_sel'))
+        select.select_by_visible_text('KT알뜰폰')
 
         print("휴대폰 번호 입력")
-        cellphone_num = 1
-        if cellphone_num != 0:
-            cellphone_num = input_user_info('cellphone_num', user_info["휴대폰번호"])
+        if not input_user_info('cellphone_num', user_info["휴대폰번호"]):
+            print("휴대폰 번호 입력 실패")
 
 
 def set_user_info(name, nationality, birth_date, gender, mobile_carrier, mobile_number, string):
     global user_info
-    user_info["이름"] = name
-    user_info["국적"] = nationality
-    user_info["생년월일"] = birth_date
-    user_info["성별"] = gender
-    user_info["통신사"] = mobile_carrier
-    user_info["휴대폰번호"] = mobile_number
+    if name:
+        user_info["이름"] = name
+    if nationality:
+        user_info["국적"] = nationality
+    if birth_date:
+        user_info["생년월일"] = birth_date
+    if gender:
+        user_info["성별"] = gender
+    if mobile_carrier:
+        user_info["통신사"] = mobile_carrier
+    if mobile_number:
+        user_info["휴대폰번호"] = mobile_number
 
 
 user_info = {
@@ -92,8 +109,8 @@ def do_crawling():
         driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
         # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
-        driver.get(
-            "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
+        # driver.get(
+        #    "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
         input_Gmarket_user_info()
     except:
         print("크롬 드라이버를 찾을 수 없음")

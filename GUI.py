@@ -55,7 +55,7 @@ class LogInDialog(QDialog):
         self.setLayout(layout)
 
     def onActivated(self, text):
-        # TODO 선택된 옵션 메인창의 label로 넘기기 <-수정
+        # TODO 선택된 옵션 메인창의 label 로 넘기기 <-수정
         #self.nation = cb.text()
         #self.lbl.adjustSize()
         print('combooooo')
@@ -64,7 +64,7 @@ class LogInDialog(QDialog):
         self.id = self.lineEdit1.text()
         self.password = self.lineEdit2.text()
         self.phone = self.lineEdit3.text()
-        OpenChromeCrawling.set_user_info(self.id, 0, self.password, self.phone, 0, 0, 0)
+        OpenChromeCrawling.set_user_info(self.id, 0, self.password, 0, 0, self.phone, 0)
         self.close()
 
 
@@ -103,8 +103,8 @@ class MyWindow(QWidget):
 
     # 크롬 열기
     def openCrome(self):
-        OpenChromeCrawling.do_crawling()
         # TODO do_crawling()이 돌아가는 동안 GUI 가 완전히 먹통됨 >> do_crawling 을 subprocess 로 작동 필요
+        OpenChromeCrawling.do_crawling()
         print('열려라 디버깅크롬크롬')
             
 
