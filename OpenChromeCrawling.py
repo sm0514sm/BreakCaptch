@@ -22,41 +22,37 @@ def input_user_info(element_name, value):
 
 def input_Gmarket_user_info():
     print("input_Gmarket_user_info() 실행")
-    while True:
-        print("-----------------")
-        time.sleep(2)
-        try:
-            # TODO 여기서 속도가 매우 느려지는데 멀티 프로세싱을 통해 단축 시킬 수 있다.
-            iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
-                                                  "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
-            driver.switch_to.frame(iframe)
-        except:
-            print("iframe 이 존재하지 않거나 접근할 수 없음")
-            continue
+    try:
+        # TODO 여기서 속도가 매우 느려지는데 멀티 프로세싱을 통해 단축 시킬 수 있다.
+        iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
+                                              "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
+        driver.switch_to.frame(iframe)
+    except:
+        print("iframe 이 존재하지 않거나 접근할 수 없음")
+        return
 
-        print("이름 입력")
-        if not input_user_info('u_name', user_info["이름"]):
-            print("이름 입력 실패")
+    print("user_info 입력")
 
-        print("국적 combobox 선택")
-        select = Select(driver.find_element_by_name('naSelect'))
-        select.select_by_visible_text('외국인')
+    if not input_user_info('u_name', user_info["이름"]):
+        print("이름 입력 실패")
 
-        print("생년월일 입력")
-        if not input_user_info('birth_date', user_info["생년월일"]):
-            print("생년월일 입력 실패")
+    select = Select(driver.find_element_by_name('naSelect'))
+    select.select_by_visible_text(user_info["국적"])
 
-        print("성별 선택")
-        sel_area = 1
-        # TODO 성별 radio button 선택하도록
+    if not input_user_info('birth_date', user_info["생년월일"]):
+        print("생년월일 입력 실패")
 
-        print("통신사 선택")
-        select = Select(driver.find_element_by_name('carrier_sel'))
-        select.select_by_visible_text('KT알뜰폰')
+    print("성별 선택")
+    if user_info["성별"] == "남자":
+        driver.find_element_by_id("gender_male").click()
+    else:
+        driver.find_element_by_id("gender_female").click()
 
-        print("휴대폰 번호 입력")
-        if not input_user_info('cellphone_num', user_info["휴대폰번호"]):
-            print("휴대폰 번호 입력 실패")
+    select = Select(driver.find_element_by_name('carrier_sel'))
+    select.select_by_visible_text(user_info["통신사"])
+
+    if not input_user_info('cellphone_num', user_info["휴대폰번호"]):
+        print("휴대폰 번호 입력 실패")
 
 
 def set_user_info(name, nationality, birth_date, gender, mobile_carrier, mobile_number, string):
@@ -77,10 +73,10 @@ def set_user_info(name, nationality, birth_date, gender, mobile_carrier, mobile_
 
 user_info = {
     "이름": "이상민",
-    "국적": "내국인",
+    "국적": "외국인",
     "생년월일": "19950516",
     "성별": "남자",
-    "통신사": "SKT",
+    "통신사": "LGU알뜰폰",
     "휴대폰번호": "01025012866",
     "자동입력방지문자": "",
 }
@@ -111,7 +107,12 @@ def do_crawling():
         # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
         # driver.get(
         #    "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
-        input_Gmarket_user_info()
+        while True:
+            time.sleep(1)
+            url = driver.current_url
+            print(driver.current_url)
+            if "sslmember2.gmarket.co.kr/FindID" in url:
+                input_Gmarket_user_info()
     except:
         print("크롬 드라이버를 찾을 수 없음")
         exit()
