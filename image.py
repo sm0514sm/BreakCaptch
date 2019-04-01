@@ -1,7 +1,7 @@
 from PIL import Image, ImageFilter
+# TODO 코드 리팩토링
 
-
-file_name = "CurrentImage (1)"
+file_name = "CurrentImage (10)"
 lists = []
 im = Image.open(file_name + '.png')
 print("width : %d, height : %d" % (im.width, im.height))
@@ -56,7 +56,7 @@ px4 = new4im.load()
 this_image_color = ()
 for j in range(45):
     if px0[j, seth] != (0, 0, 0, 0):
-        this_image_color = px0[j, seth]
+        this_image_color = px0[j, seth]  # 지금 이 방식 문제 있음, 가장 많은 색을 추출하는 식으로 해야할듯 # 반례 CurrentImage (8)
         print(this_image_color)
         break
 for i in range(45):
