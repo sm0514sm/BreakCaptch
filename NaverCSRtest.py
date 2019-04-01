@@ -53,11 +53,12 @@ for file_name in file_list:
         myDict = eval(response.text)
         myString = myDict["text"].upper()
         myList = myString.split(" ")
-        if len(myList) == 5:
-            print(myList)
-            for i in range(5):
-                if not myList[i] in file_name[i]:
-                    alpha[file_name[i]].append(myList[i])
+        print(file_name, myList)
+        # if len(myList) == 5:
+        #     print(myList)
+        #     for i in range(5):
+        #         if not myList[i] in file_name[i]:
+        #             alpha[file_name[i]].append(myList[i])
 
 
     else:
