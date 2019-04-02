@@ -59,8 +59,6 @@ for file_name in file_list:
         #     for i in range(5):
         #         if not myList[i] in file_name[i]:
         #             alpha[file_name[i]].append(myList[i])
-
-
     else:
         print("Error : " + response.text)
 
