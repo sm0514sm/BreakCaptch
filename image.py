@@ -25,7 +25,7 @@ def line_delete(image, pixel):
     spe_h = 0
 
     # 다섯가지 색상만이 존재하는 special_height 구하기
-    for y in range(image.height):
+    for y in range(5, image.height):
         global color_lists
         color_lists = []
         for x in range(image.width):
@@ -33,9 +33,14 @@ def line_delete(image, pixel):
                 if pixel[x, y] != CLEAR and\
                         (pixel[x, y] == pixel[x+2, y] or pixel[x, y] == pixel[x-2, y]):
                     color_lists.append(pixel[x, y])
+                    print("x, y = ", x, y)
+                    print("해당 좌표 색 = ", pixel[x, y])
         if len(color_lists) == 5:
             spe_h = y
-            print("special_height : %d" % y)
+            if "XCCGN" in file_name:
+                print("XCCGN Test")
+                print("special_height : %d" % y)
+                print(color_lists)
             break
 
     # color_lists 에 없는 색상 삭제, 있는 색상은 각 색상 별 최소 x 위치
@@ -43,10 +48,11 @@ def line_delete(image, pixel):
         for x in range(image.width):
             if px[x, y] not in color_lists:     # 색상 리스트에 없으면 해당 색상은 삭제
                 px[x, y] = CLEAR
-            else:                               # 색상 리스트에 있으면 해당 위치와 각 색깔 별 최소 x위치 판별
+            else:                               # 색상 리스트에 있으면 해당 위치와 각 색깔 별 최소, 최대 x위치 판별
                 for i in range(len(color_lists)):
                     if px[x, y] == color_lists[i]:
                         color_most_left_list[i] = min(color_most_left_list[i], x)
+                        color_most_right_list[i] = max(color_most_right_list[i], x)
     im.save(save_dir + "/" + file_name[:5] + "_1_line_delete.png")
 
     return spe_h
@@ -55,32 +61,33 @@ def line_delete(image, pixel):
 # 문자 색상별로 5개로 나누기
 # bbox = (x, y, width+x, height+y)
 # spe_h = special_height
-def character_separate(image, bbox, spe_h, naming, char):
+def character_separate(image, bbox, naming, char):
     new_image = image.crop(bbox)
     new_pixel = new_image.load()
 
     # TODO bbox 범위 초과시 에러 출력 종료
 
-    # # 자른 이미지 글자의 주 색상 찾기
-    # this_image_color = ()
-    # new_color_dicts = {}
-    # for y in range(new_image.height):
-    #     for x in range(new_image.width):
-    #         if new_pixel[x, y] is not CLEAR:
-    #             if new_pixel[x, y] not in new_color_dicts.keys():
-    #                 new_color_dicts[new_pixel[x, y]] = 1
-    #             else:
-    #                 new_color_dicts[new_pixel[x, y]] += 1
-    # main_color = ()
-    # max = 0
-    # for color_dict in new_color_dicts:
-    #     max(new_color_dicts[color_dict])
-
-    for x in range(new_image.width):
-        if new_pixel[x, spe_h] is not CLEAR:
-            this_image_color = new_pixel[x, spe_h]  # TODO XCCGN
-            print(naming, "색상 :", this_image_color)
+    # 자른 이미지 글자의 주 색상 찾기
+    this_image_color = ()
+    new_color_dicts = {}
+    for y in range(new_image.height):
+        for x in range(new_image.width-1, 0, -1):
+            if new_pixel[x, y] != CLEAR:
+                if new_pixel[x, y] not in new_color_dicts.keys():
+                    new_color_dicts[new_pixel[x, y]] = 1
+                else:
+                    new_color_dicts[new_pixel[x, y]] += 1
+    max_value = max(new_color_dicts.values())
+    for color_dict in new_color_dicts:
+        if new_color_dicts[color_dict] == max_value:
+            this_image_color = color_dict
             break
+
+    # for x in range(new_image.width):
+    #     if new_pixel[x, spe_h] is not CLEAR:
+    #         this_image_color = new_pixel[x, spe_h]  # TODO XCCGN
+    #         print(naming, "색상 :", this_image_color)
+    #         break
 
     # 해당 색상은 검정색으로, 나머지는 흰색으로
     for y in range(new_image.height):
@@ -91,11 +98,13 @@ def character_separate(image, bbox, spe_h, naming, char):
                 new_pixel[x, y] = BLACK
 
     new_image.save(save_dir + "/" + file_name[:5] + "_result_" + naming + ".png")
-    print(save_dir + "/" + file_name[:5] + "_result_" + naming + ".png" + " >> 생성")
-    if not os.access(path_dir + "_" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
-        os.mkdir(path_dir + "_" + char)
-    new_image.save(path_dir + "_" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
-    print(path_dir + "_" + char + "/" + file_name[:5] + "_result_" + naming + ".png" + " >> 생성")
+    # print(save_dir + "/" + file_name[:5] + "_result_" + naming + ".png" + " >> 생성")
+    if not os.access(path_dir + "train", os.F_OK):
+        os.mkdir(path_dir + "train")
+    if not os.access(path_dir + "train/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
+        os.mkdir(path_dir + "train/" + char)
+    new_image.save(path_dir + "train/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
+    # print(path_dir + "train/" + char + "/" + file_name[:5] + "_result_" + naming + ".png" + " >> 생성")
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
@@ -120,18 +129,19 @@ if __name__ == '__main__':
             os.mkdir(save_dir)
 
         color_most_left_list = [im.width for i in range(5)]
+        color_most_right_list = [0 for i in range(5)]
 
         blur_pixel_delete(im, px)
         special_height = line_delete(im, px)
 
         num = 0
-        for most_left in color_most_left_list:
-            character_separate(im, (most_left, 0, most_left + 60, 45), special_height, str(num), file_name[num])
+        for num in range(5):
+            character_separate(im, (color_most_left_list[num], 0, color_most_right_list[num], 45),
+                               str(num), file_name[num])
             num += 1
 
         if len(color_lists) != 5:
             error_count += 1
-        print()
         image_count += 1
 
     print("""
