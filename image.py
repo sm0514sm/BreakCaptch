@@ -120,6 +120,5 @@ for file_name in file_list:
 
 
 print("""
--------------------
 Test Image Files Count = %d
 Error Count            = %3d""" % (len(file_list), error_count))
