@@ -1,9 +1,12 @@
 from pydub import AudioSegment #음성 편집
 import os #디렉터리 생성
 
+# 함수로 만들어서 다른 파일들이랑 이어붙여야함
+# 그러려면 음성파일을 웹페이지에서 가져와서 넣는거 해줘야 되는뎅...
+
 audio = "ZUGEP"
 
-#음성 파일 가져오기
+#음성 파일 가져오기 <- 원래는 웹페이지에서 가져와야함.
 sound = AudioSegment.from_wav("audio/" + audio + ".wav")
 print(sound.duration_seconds)
 
