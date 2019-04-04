@@ -8,7 +8,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 
-
 # element_name 에 value 를 입력
 # 성공 1, 실패 0
 def input_user_info(element_name, value):
