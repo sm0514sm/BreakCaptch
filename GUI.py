@@ -13,6 +13,9 @@ class LogInDialog(QDialog):
         self.id = None
         self.password = None
         self.phone = None
+        self.sex = None
+        self.nation = None
+        self.agency = None
 
     def setupUI(self):
         self.setGeometry(1100, 200, 300, 100)
@@ -29,9 +32,13 @@ class LogInDialog(QDialog):
         self.lineEdit2 = QLineEdit()
         self.lineEdit3 = QLineEdit()
         # 콤보박스 - 내국인외국인
-        cb = QComboBox(self)
-        cb.addItems(["내국인", "외국인"])
-        cb.currentTextChanged.connect(self.onActivated)
+        cb1 = QComboBox(self)
+        cb1.addItems(["내국인", "외국인"])
+        cb1.currentTextChanged.connect(self.onActivated)
+        # 콤보박스 - 통신사
+        cb2 = QComboBox(self)
+        cb2.addItems(["skt", "U+", "kt", "알뜰폰"])
+        cb2.currentTextChanged.connect(self.onActivated)
         self.setWindowTitle('QComboBox')
         # 라디오버튼 - 남여
         self.rbtn1 = QRadioButton('남', self)
@@ -44,7 +51,8 @@ class LogInDialog(QDialog):
         layout.addWidget(label1, 0, 0)
         layout.addWidget(self.lineEdit1, 0, 1)
         # 콤보박스
-        layout.addWidget(cb, 0, 2)
+        layout.addWidget(cb1, 0, 2)
+        layout.addWidget(cb2, 0, 3)
         layout.addWidget(label2, 1, 0)
         layout.addWidget(self.lineEdit2, 1, 1)
         layout.addWidget(self.rbtn1, 1, 2)
@@ -64,7 +72,14 @@ class LogInDialog(QDialog):
         self.id = self.lineEdit1.text()
         self.password = self.lineEdit2.text()
         self.phone = self.lineEdit3.text()
-        OpenChromeCrawling.set_user_info(self.id, 0, self.password, 0, 0, self.phone, 0)
+        if self.rbtn1.isChecked():
+            self.sex = self.rbtn1.text()
+        else:
+            if self.rbtn2.isChecked():
+                self.sex = self.rbtn2.text()
+        #self.nation = self.text1
+        #self.agency = self.text2
+        OpenChromeCrawling.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
         self.close()
 
 
@@ -97,9 +112,12 @@ class MyWindow(QWidget):
         dlg = LogInDialog()
         dlg.exec_()
         id = dlg.id
+        sex = dlg.sex
+        nation = dlg.nation
+        agency = dlg.agency
         password = dlg.password
         phone = dlg.phone
-        self.label.setText("id: %s password: %s phone: %s nationality : " % (id, password, phone))
+        self.label.setText("name: %s\nnationality : %s\nbirth: %s\nsex : %s\nagency : %s\nphone: %s" % (id, nation, password, sex, agency, phone))
 
     # 크롬 열기
     def openCrome(self):
