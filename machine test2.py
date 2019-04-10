@@ -4,9 +4,7 @@
 from sklearn import linear_model
 from sklearn import svm
 from PIL import Image
-import matplotlib.pyplot as plt
 import os
-import random
 
 X_train = []
 Y_train = []
@@ -27,16 +25,26 @@ def Xinput(name):
     return inp
 
 
+def XinputRGBPlus(name):
+    im = Image.open(name)
+    px = im.load()
+    inp = []
+    for y in range(im.height):
+        for x in range(im.width):
+            inp.append(px[x, y][0] + px[x, y][1] + px[x, y][2])
+    return inp
+
+
 def path_input(folder, alphabet):
     global Y_train
     train_file_list = os.listdir("./test2/" + folder + "/" + alphabet + "/")
     train_file_list.sort()
     for file_name in train_file_list:
         if folder == "./train":
-            X_train.append(Xinput("./test2/" + folder + "/" + alphabet + "/" + file_name))
+            X_train.append(XinputRGBPlus("./test2/" + folder + "/" + alphabet + "/" + file_name))
             Y_train.append(alphabet)
         elif folder == "./test":
-            X_test.append(Xinput("./test2/" + folder + "/" + alphabet + "/" + file_name))
+            X_test.append(XinputRGBPlus("./test2/" + folder + "/" + alphabet + "/" + file_name))
             Y_test.append(alphabet)
 
 
@@ -60,6 +68,7 @@ logreg.fit(X_train, Y_train)
 y_test_estimated = logreg.predict(X_test)
 print("Logistic 결과 :", y_test_estimated)
 result = y_test_estimated
+
 count = 0
 for i, num in enumerate(Y_test):
     if num == result[i]:
@@ -67,8 +76,10 @@ for i, num in enumerate(Y_test):
 print("정확도 : %.2f%%\n" % (count/len(Y_test)*100))
 
 
-clf = svm.SVC(gamma='scale', decision_function_shape='ovo')
-clf.fit(X_train, Y_train)
+clf = svm.SVC(gamma='scale', decision_function_shape='ovo', probability=True)
+model = clf.fit(X_train, Y_train)
+
+# print(model.predict_proba([Xinput("./test2/test/Z/ACBZB_result_3.png")]))   # 해당 이미지가 어느 알파벳에 속하는지 확률
 result = clf.predict(X_test)
 print("SVM      결과 :", clf.predict(X_test))
 count = 0

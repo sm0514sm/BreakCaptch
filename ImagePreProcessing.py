@@ -49,7 +49,7 @@ def line_delete(image, pixel):
     return spe_h
 
 
-# 문자 색상별로 5개로 나누기
+# 흑백 + 크기일정 + 라인삭제
 # bbox = (x, y, width+x, height+y)
 # spe_h = special_height
 # save_dir_name = 최종적으로 생성될 폴더명 --> ./보안문자/save_dir_name/A..Z/ABCDE.jpg
@@ -90,6 +90,7 @@ def character_separate(image, bbox, naming, char, save_dir_name):
     new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".jpg")
 
 
+# 칼라 + 크기일정 + 라인유지
 def character_separate_with_line(image, bbox, naming, char, save_dir_name):
     new_image = image.crop(bbox)
     new_pixel = new_image.load()
@@ -97,6 +98,45 @@ def character_separate_with_line(image, bbox, naming, char, save_dir_name):
     for y in range(new_image.height):
         for x in range(new_image.width):
             if new_pixel[x, y] == CLEAR or new_pixel[x, y] == BLACK:
+                new_pixel[x, y] = WHITE
+
+    # bg_image 에 new_image 덮어씌우기
+    bg_image.paste(new_image, (0, 0, new_image.width, new_image.height))
+    new_image = bg_image
+
+    if not os.access(path_dir + save_dir_name, os.F_OK):
+        os.mkdir(path_dir + save_dir_name)
+    if not os.access(path_dir + save_dir_name + "/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
+        os.mkdir(path_dir + save_dir_name + "/" + char)
+    new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".jpg")
+
+
+# 칼라 + 크기일정 + 라인삭제
+def character_separate_color_no_line(image, bbox, naming, char, save_dir_name):
+    new_image = image.crop(bbox)
+    new_pixel = new_image.load()
+    bg_image = Image.new("RGB", (MAX_WIDTH, new_image.height), WHITE)
+    new_color_dicts = {}
+    this_image_color = ()
+    for y in range(new_image.height):
+        for x in range(new_image.width):
+            if new_pixel[x, y] == CLEAR or new_pixel[x, y] == BLACK:
+                new_pixel[x, y] = WHITE
+            if new_pixel[x, y] != CLEAR and new_pixel[x, y] != BLACK and new_pixel[x, y] != WHITE:
+                if new_pixel[x, y] not in new_color_dicts.keys():
+                    new_color_dicts[new_pixel[x, y]] = 1
+                else:
+                    new_color_dicts[new_pixel[x, y]] += 1
+    max_value = max(new_color_dicts.values())
+    for color_dict in new_color_dicts:
+        if new_color_dicts[color_dict] == max_value:
+            this_image_color = color_dict
+            break
+
+    # 해당 색상은 그대로, 나머지는 흰색으로
+    for y in range(new_image.height):
+        for x in range(new_image.width):
+            if new_pixel[x, y] != this_image_color:
                 new_pixel[x, y] = WHITE
 
     # bg_image 에 new_image 덮어씌우기
@@ -134,6 +174,8 @@ if __name__ == '__main__':
 
         num = 0
         for num in range(5):
+            character_separate_color_no_line(im, (color_most_left_list[num], 0, color_most_right_list[num], 45),
+                                             str(num), file_name[num], "Color no_line")
             character_separate(im, (color_most_left_list[num], 0, color_most_right_list[num], 45),
                                str(num), file_name[num], "Black no_line")
             num += 1
