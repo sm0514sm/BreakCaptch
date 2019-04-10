@@ -161,6 +161,7 @@ if __name__ == '__main__':
     file_list = os.listdir(path_dir)
     file_list.sort()
     print("Black no_line 생성 중")
+    print("Color no_line 생성 중")
     for file_name in file_list:
         color_lists = []    # 해당 이미지의 5가지 문자 각각의 색 (R, G, B, A) 리스트
 
