@@ -44,7 +44,7 @@ def line_delete(image, pixel):
                     if px[x, y] == color_lists[i]:
                         color_most_left_list[i] = min(color_most_left_list[i], x)
                         color_most_right_list[i] = max(color_most_right_list[i], x)
-    # im.save(save_dir + "/" + file_name[:5] + "_1_line_delete.png")
+    # im.save(save_dir + "/" + file_name[:5] + "_1_line_delete.jpg")
 
     return spe_h
 
@@ -52,7 +52,7 @@ def line_delete(image, pixel):
 # 문자 색상별로 5개로 나누기
 # bbox = (x, y, width+x, height+y)
 # spe_h = special_height
-# save_dir_name = 최종적으로 생성될 폴더명 --> ./보안문자/save_dir_name/A..Z/ABCDE.png
+# save_dir_name = 최종적으로 생성될 폴더명 --> ./보안문자/save_dir_name/A..Z/ABCDE.jpg
 def character_separate(image, bbox, naming, char, save_dir_name):
     new_image = image.crop(bbox)
     new_pixel = new_image.load()
@@ -87,7 +87,7 @@ def character_separate(image, bbox, naming, char, save_dir_name):
         os.mkdir(path_dir + save_dir_name)
     if not os.access(path_dir + save_dir_name + "/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
         os.mkdir(path_dir + save_dir_name + "/" + char)
-    new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
+    new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".jpg")
 
 
 def character_separate_with_line(image, bbox, naming, char, save_dir_name):
@@ -107,7 +107,7 @@ def character_separate_with_line(image, bbox, naming, char, save_dir_name):
         os.mkdir(path_dir + save_dir_name)
     if not os.access(path_dir + save_dir_name + "/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
         os.mkdir(path_dir + save_dir_name + "/" + char)
-    new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
+    new_image.save(path_dir + save_dir_name + "/" + char + "/" + file_name[:5] + "_result_" + naming + ".jpg")
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
