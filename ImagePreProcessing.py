@@ -7,7 +7,7 @@ WHITE = (255, 255, 255, 255)    # 흰색
 BLACK = (0, 0, 0, 255)          # 검정
 
 MAX_WIDTH = 60
-TRAIN_NUM = 2   # 주의 : 5개밖에 없는 문자있음
+TEST_NUM = 2   # 주의 : 5개밖에 없는 문자있음. Train 도 고려해야함.
 
 
 # 블러 픽셀 제거 (alpha 값이 255가 아니면 삭제)
@@ -45,7 +45,6 @@ def line_delete(image, pixel):
                     if px[x, y] == color_lists[i]:
                         color_most_left_list[i] = min(color_most_left_list[i], x)
                         color_most_right_list[i] = max(color_most_right_list[i], x)
-    # im.save(save_dir + "/" + file_name[:5] + "_1_line_delete.jpg")
 
     return spe_h
 
@@ -94,7 +93,7 @@ def character_separate(image, bbox, naming, char, save_dir_name):
         os.mkdir(path_dir + save_dir_name + "/train/" + char)
     if not os.access(path_dir + save_dir_name + "/test/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
         os.mkdir(path_dir + save_dir_name + "/test/" + char)
-    if Black_no_line_counter[ord(char)-65] == TRAIN_NUM:
+    if Black_no_line_counter[ord(char)-65] == TEST_NUM:
         new_image.save(path_dir + save_dir_name + "/train/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
     else:
         new_image.save(path_dir + save_dir_name + "/test/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
@@ -125,7 +124,7 @@ def character_separate_with_line(image, bbox, naming, char, save_dir_name):
         os.mkdir(path_dir + save_dir_name + "/train/" + char)
     if not os.access(path_dir + save_dir_name + "/test/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
         os.mkdir(path_dir + save_dir_name + "/test/" + char)
-    if Color_with_line_counter[ord(char) - 65] == TRAIN_NUM:
+    if Color_with_line_counter[ord(char) - 65] == TEST_NUM:
         new_image.save(path_dir + save_dir_name + "/train/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
     else:
         new_image.save(path_dir + save_dir_name + "/test/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
@@ -174,7 +173,7 @@ def character_separate_color_no_line(image, bbox, naming, char, save_dir_name):
         os.mkdir(path_dir + save_dir_name + "/train/" + char)
     if not os.access(path_dir + save_dir_name + "/test/" + char, os.F_OK):  # 해당 디렉토리가 이미 존재하는지 확인
         os.mkdir(path_dir + save_dir_name + "/test/" + char)
-    if Color_no_line_counter[ord(char) - 65] == TRAIN_NUM:
+    if Color_no_line_counter[ord(char) - 65] == TEST_NUM:
         new_image.save(path_dir + save_dir_name + "/train/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
     else:
         new_image.save(path_dir + save_dir_name + "/test/" + char + "/" + file_name[:5] + "_result_" + naming + ".png")
