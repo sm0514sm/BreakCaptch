@@ -1,21 +1,20 @@
 # test2 폴더 내에 train, test 폴더로 나뉘며
 # 각각의 폴더에는 알파벳 별로 폴더가 다시 나뉘어야한다.
 import mglearn as mglearn
-from sklearn import linear_model
-from sklearn import svm
+from sklearn import linear_model, svm, tree
 from sklearn.svm import NuSVC
 from sklearn.linear_model import SGDClassifier
-from sklearn import tree
-from sklearn.neighbors import KNeighborsClassifier, KDTree
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neighbors.nearest_centroid import NearestCentroid
-from sklearn.naive_bayes import GaussianNB, MultinomialNB, ComplementNB, BernoulliNB
-from sklearn.cross_decomposition import PLSCanonical, PLSRegression, CCA
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, GradientBoostingRegressor
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, ComplementNB
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from PIL import Image
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import os
+import numpy
+import pandas
 
 X_train = []
 Y_train = []
@@ -63,110 +62,150 @@ def path_input(folder, alphabet):
             Y_test_num.append(ord(alphabet) - 65)
 
 
-for char in alpha:
-    path_input("./train", char)
-    path_input("./test", char)
+def DoImageML():
+    for char in alpha:
+        path_input("./train", char)
+        path_input("./test", char)
 
 
-print("         정답 : [", end="")
+# -------------------------------------------------------------------------------------------------- #
+
+def sound_input(csv_file_name, X, Y):
+    csv_data = pandas.read_csv('test.csv')
+    header = list(csv_data.columns)
+    for i in header:
+        Y.append(i[2:3])
+    row_count = len(csv_data)
+    column_count = len(Y)
+    csv_array = csv_data.values     # header 값을 제외한 값들
+    for j in range(len(Y)):
+        temp_X = []
+        for i in range(row_count):
+            temp_X.append(csv_array[i][j])
+        X.append(temp_X)
+
+
+def DoSoundML():
+    sound_input("./train.csv", X_train, Y_train)
+    sound_input("./test.csv", X_test, Y_test)
+
+
+# ----------------------------------------------------------------- #
+# DoImageML()
+DoSoundML()     # 두개 동시에 실행하면 안됨
+
+print("정답 : [", end="")
 for i, y in enumerate(Y_test):
     if i == len(Y_test)-1:
         print("\'%s\'" % y, end="")
     else:
         print("\'%s\'" % y, end=" ")
-print("]\n")
+print("]")
 
 # ----------------------------------------------------------------- #
 
 logreg = linear_model.LogisticRegression()
 logreg.fit(X_train, Y_train)
 print("Logistic", end=" ")
-print("정확도 : %.2f%%\n" % (logreg.score(X_test, Y_test)*100))
-
+print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
+print("결과 :", logreg.predict(X_test))
 
 logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='ovr')
 logreg.fit(X_train, Y_train)
 print("Logistic ovr", end=" ")
-print("정확도 : %.2f%%\n" % (logreg.score(X_test, Y_test)*100))
-
+print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
+print("결과 :", logreg.predict(X_test))
 
 logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='multinomial')
 logreg.fit(X_train, Y_train)
 print("Logistic multinomial", end=" ")
-print("정확도 : %.2f%%\n" % (logreg.score(X_test, Y_test)*100))
-
+print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
+print("결과 :", logreg.predict(X_test))
 
 clf = svm.SVC(gamma='scale', decision_function_shape='ovo', probability=True)
 model = clf.fit(X_train, Y_train)
 # print(model.predict_proba([Xinput("./test2/test/Z/ACBZB_result_3.png")]))   # 해당 이미지가 어느 알파벳에 속하는지 확률
 print("SVM(SVC)     ", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
-
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
+print("결과 :", clf.predict(X_test))
 
 lin_clf = svm.LinearSVC()
 lin_clf.fit(X_train, Y_train)
 print("SVM(LinearSVC)     ", end=" ")
-print("정확도 : %.2f%%\n" % (lin_clf.score(X_test, Y_test)*100))
-
+print("정확도 : %.2f%%" % (lin_clf.score(X_test, Y_test)*100))
+print("결과 :", lin_clf.predict(X_test))
 
 clf = NuSVC(gamma='scale', nu=0.1)
 clf.fit(X_train, Y_train)
 print("SVM(NuSVC)     ", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
 
 
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X_train, Y_train)
 print("tree(DecisionTreeClassifier)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
 
 
 clf = KNeighborsClassifier(n_neighbors=3)
 clf.fit(X_train, Y_train)
 print("Nearest Neighbors(KNeighborsClassifier)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
 
 
 clf = NearestCentroid()
 clf.fit(X_train, Y_train)
 print("Nearest Neighbors(NearestCentroid)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
 
 
 clf = GaussianNB()
 clf.fit(X_train, Y_train)
 print("Naive Bayes(GaussianNB)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test) * 100))
+print("정확도 : %.2f%%" % (clf.score(X_test, Y_test) * 100))
 
 
-clf = MultinomialNB()
-clf.fit(X_train, Y_train)
-print("Naive Bayes(MultinomialNB)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test) * 100))
+try:
+    clf = MultinomialNB()
+    clf.fit(X_train, Y_train)
+    print("Naive Bayes(MultinomialNB)", end=" ")
+    print("정확도 : %.2f%%" % (clf.score(X_test, Y_test) * 100))
+except:
+    print("Naive Bayes(MultinomialNB) 측정 불가")
 
 
-clf = ComplementNB()
-clf.fit(X_train, Y_train)
-print("Naive Bayes(ComplementNB)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test) * 100))
+try:
+    clf = ComplementNB()
+    clf.fit(X_train, Y_train)
+    print("Naive Bayes(ComplementNB)", end=" ")
+    print("정확도 : %.2f%%" % (clf.score(X_test, Y_test) * 100))
+except:
+    print("Naive Bayes(ComplementNB) 측정 불가")
 
 
-clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
-clf.fit(X_train, Y_train)
-print("SGDClassifier", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+try:
+    clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
+    clf.fit(X_train, Y_train)
+    print("SGDClassifier", end=" ")
+    print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
+except:
+    print("SGDClassifier 측정 불가")
 
+try:
+    clf = RandomForestClassifier(n_estimators=10)
+    clf.fit(X_train, Y_train)
+    print("Ensemble methods(RandomForestClassifier)", end=" ")
+    print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
+except:
+    print("Ensemble methods(RandomForestClassifier)")
 
-clf = RandomForestClassifier(n_estimators=10)
-clf.fit(X_train, Y_train)
-print("Ensemble methods(RandomForestClassifier)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
-
-
-clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
-clf.fit(X_train, Y_train)
-print("Neural network models(MLPClassifier)", end=" ")
-print("정확도 : %.2f%%\n" % (clf.score(X_test, Y_test)*100))
+try:
+    clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
+    clf.fit(X_train, Y_train)
+    print("Neural network models(MLPClassifier)", end=" ")
+    print("정확도 : %.2f%%" % (clf.score(X_test, Y_test)*100))
+except:
+    print("Neural network models(MLPClassifier)", end=" ")
 # neighbors_settings = range(1, 11)
 # training_accuracy = []
 # test_accuracy = []
