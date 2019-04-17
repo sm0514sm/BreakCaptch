@@ -71,14 +71,14 @@ def DoImageML():
 # -------------------------------------------------------------------------------------------------- #
 
 def sound_input(csv_file_name, X, Y):
-    csv_data = pandas.read_csv('test.csv')
+    csv_data = pandas.read_csv(csv_file_name)
     header = list(csv_data.columns)
     for i in header:
         Y.append(i[2:3])
     row_count = len(csv_data)
     column_count = len(Y)
     csv_array = csv_data.values     # header 값을 제외한 값들
-    for j in range(len(Y)):
+    for j in range(column_count):
         temp_X = []
         for i in range(row_count):
             temp_X.append(csv_array[i][j])
@@ -110,17 +110,17 @@ print("Logistic", end=" ")
 print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
 print("결과 :", logreg.predict(X_test))
 
-logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='ovr')
-logreg.fit(X_train, Y_train)
-print("Logistic ovr", end=" ")
-print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
-print("결과 :", logreg.predict(X_test))
-
-logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='multinomial')
-logreg.fit(X_train, Y_train)
-print("Logistic multinomial", end=" ")
-print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
-print("결과 :", logreg.predict(X_test))
+# logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='ovr')
+# logreg.fit(X_train, Y_train)
+# print("Logistic ovr", end=" ")
+# print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
+# print("결과 :", logreg.predict(X_test))
+#
+# logreg = linear_model.LogisticRegression(solver='sag', max_iter=100, random_state=42, multi_class='multinomial')
+# logreg.fit(X_train, Y_train)
+# print("Logistic multinomial", end=" ")
+# print("정확도 : %.2f%%" % (logreg.score(X_test, Y_test)*100))
+# print("결과 :", logreg.predict(X_test))
 
 clf = svm.SVC(gamma='scale', decision_function_shape='ovo', probability=True)
 model = clf.fit(X_train, Y_train)
