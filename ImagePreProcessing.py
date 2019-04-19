@@ -45,7 +45,6 @@ def line_delete(image, pixel):
                     if px[x, y] == color_lists[i]:
                         color_most_left_list[i] = min(color_most_left_list[i], x)
                         color_most_right_list[i] = max(color_most_right_list[i], x)
-
     return spe_h
 
 
@@ -200,13 +199,15 @@ if __name__ == '__main__':
         if os.path.isdir(path_dir + file_name):  # 디렉토리일 경우 넘김
             continue
         im = Image.open(path_dir + file_name)
+
         line_im = Image.open(path_dir + file_name)
         px = im.load()
 
         blur_pixel_delete(im, px)
+        im.save("./임시/" + file_name[:5] + ".png")
         blur_pixel_delete(line_im, px)
         special_height = line_delete(im, px)
-
+        im.save("./임시/" + file_name[:5] + "noline.png")
         num = 0
         for num in range(5):
             character_separate_with_line(line_im, (color_most_left_list[num], 0, color_most_right_list[num], 45),
