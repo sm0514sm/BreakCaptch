@@ -2,10 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Break Captcha.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Break Captcha.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/LGPC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoMachineLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoMachineLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OpenChromeCrawling.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenChromeCrawling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/30.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,41 +56,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="126" column="12" lean-forward="true" selection-end-line="133" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speech.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AudioRecongization.py">
+        <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1634">
-              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+              <folding>
+                <element signature="e#120#145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,25 +89,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
         <option value="$PROJECT_DIR$/speech.py" />
         <option value="$PROJECT_DIR$/AudioRecongization.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
+        <option value="$PROJECT_DIR$/DoMachineLearning.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
+    <option name="x" value="675" />
+    <option name="width" value="698" />
     <option name="height" value="735" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -124,7 +137,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AudioRecongization">
+  <component name="RunManager" selected="Python.DoMachineLearning">
     <configuration name="AudioRecongization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Break Captcha" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,6 +151,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AudioRecongization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DoMachineLearning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Break Captcha" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DoMachineLearning.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,6 +245,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DoMachineLearning" />
         <item itemvalue="Python.AudioRecongization" />
         <item itemvalue="Python.speech" />
         <item itemvalue="Python.GUI" />
@@ -240,22 +275,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1559815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3344426" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966952" visible="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50033045" side_tool="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,34 +302,87 @@
     <option name="LAST_COMMIT_MESSAGE" value="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/speech.py">
+    <entry file="file://$PROJECT_DIR$/speech.py" />
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="72">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+    <entry file="file://$PROJECT_DIR$/AudioRecongization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1634">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        <state relative-caret-position="-981">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="126" column="12" lean-forward="true" selection-end-line="133" />
+        <state relative-caret-position="477">
+          <caret line="124" column="40" lean-forward="true" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioRecongization.py">
+    <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-3681">
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1144" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NaverCSRtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-891">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SoundAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadExelTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="153" column="45" lean-forward="true" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="e#120#145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
