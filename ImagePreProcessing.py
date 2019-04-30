@@ -180,10 +180,20 @@ def character_separate_color_no_line(image, bbox, naming, char, save_dir_name):
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
+def OneImageProcessing():
+    target_image_name = "test.png"
+    target_im = Image.open("./" + target_image_name)
+    target_px = target_im.load()
+    blur_pixel_delete(target_im, target_px)
+    blur_pixel_delete(target_im, target_px)
+    for count in range(5):
+        character_separate(target_im, (color_most_left_list[count], 0, color_most_right_list[count], 45),
+                           str(count), file_name[count], "Black no_line")
+
 
 if __name__ == '__main__':
     path_dir = "./보안문자/"     # >> 이미지 파일들이 있는 디렉토리
-    save_dir = ""               # >> 수정금지
+    save_dir = ""                # >> 수정금지
 
     Color_with_line_counter = [0 for a in range(26)]
     Color_no_line_counter = [0 for a in range(26)]

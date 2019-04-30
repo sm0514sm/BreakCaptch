@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/LGPC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoMachineLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoMachineLearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImagePreProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImagePreProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OpenChromeCrawling.py" beforeDir="false" afterPath="$PROJECT_DIR$/OpenChromeCrawling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/30.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +13,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+            <state relative-caret-position="140">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
               <folding>
                 <element signature="e#120#145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-66">
+              <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="114" column="21" lean-forward="true" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +70,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>speech</find>
+      <find>크롬 드라이버</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,8 +83,9 @@
         <option value="$PROJECT_DIR$/speech.py" />
         <option value="$PROJECT_DIR$/AudioRecongization.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
         <option value="$PROJECT_DIR$/DoMachineLearning.py" />
+        <option value="$PROJECT_DIR$/ImagePreProcessing.py" />
+        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
       </list>
     </option>
   </component>
@@ -137,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DoMachineLearning">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="AudioRecongization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Break Captcha" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,10 +237,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.DoMachineLearning" />
         <item itemvalue="Python.AudioRecongization" />
         <item itemvalue="Python.speech" />
-        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.OpenChromeCrawling" />
       </list>
     </recent_temporary>
@@ -276,7 +268,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1559815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -317,25 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="124" column="40" lean-forward="true" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3681">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/machine test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1144" />
@@ -369,20 +341,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="153" column="45" lean-forward="true" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+        <state relative-caret-position="140">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
           <folding>
             <element signature="e#120#145#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="188" column="13" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="114" column="21" lean-forward="true" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="118" column="13" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
         </state>
       </provider>
     </entry>
