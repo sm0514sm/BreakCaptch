@@ -1,4 +1,4 @@
-# 이미지는 test2 폴더 내에 train, test 폴더로 나뉘며
+# 이미지는 train_test_image 폴더 내에 train, test 폴더로 나뉘며
 # 각각의 폴더에는 알파벳 별로 폴더가 다시 나뉘어야한다.
 # 음성은 동일한 폴더 내에 train.csv, test.csv 파일이 존재해야한다.
 import mglearn as mglearn
@@ -10,6 +10,7 @@ import pandas
 import time
 
 alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"    # 해당 문자열에 포함된 문자만 학습 후 테스트 함
+
 
 def Xinput(name):
     im = Image.open(name)
@@ -33,14 +34,14 @@ def XinputRGBPlus(name):
 
 def path_input(folder, alphabet):
     global Y_train
-    train_file_list = os.listdir("./test2/" + folder + "/" + alphabet + "/")
+    train_file_list = os.listdir("./train_test_image/" + folder + "/" + alphabet + "/")
     train_file_list.sort()
     for file_name in train_file_list:
         if folder == "train":
-            X_train.append(XinputRGBPlus("./test2/" + folder + "/" + alphabet + "/" + file_name))
+            X_train.append(XinputRGBPlus("./train_test_image/" + folder + "/" + alphabet + "/" + file_name))
             Y_train.append(alphabet)
         elif folder == "test":
-            X_test.append(XinputRGBPlus("./test2/" + folder + "/" + alphabet + "/" + file_name))
+            X_test.append(XinputRGBPlus("./train_test_image/" + folder + "/" + alphabet + "/" + file_name))
             Y_test.append(alphabet)
 
 
