@@ -15,8 +15,8 @@ def input_user_info(element_name, value):
     try:
         driver.find_element_by_name(element_name).send_keys(value)
         return 1
-    except:
-        print("Can't access %s", element_name)
+    except BaseException as e:
+        print(e)
         return 0
 
 
@@ -27,8 +27,8 @@ def input_Gmarket_user_info():
         iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
                                               "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
         driver.switch_to.frame(iframe)
-    except:
-        print("iframe 이 존재하지 않거나 접근할 수 없음")
+    except BaseException as e:
+        print(e)
         return
 
     print("user_info 입력")
@@ -114,20 +114,18 @@ user_info = {
     "휴대폰번호": "01025012866",
     "자동입력방지문자": "",
 }
-
-
 driver = None
-print("driver 선언")
 
 
 def do_crawling():
+
     # 디버깅모드로 크롬 키기, 크롬이 깔린 위치를 지정해 주어야함
     # 만약 해당 파일이 chrome 설치 드라이브와 다르면 "C:" 명령어 필요
     try:
         os.popen("C: && cd C:\\Program Files (x86)\\Google\\Chrome\\Application && "
                  "chrome.exe --remote-debugging-port=9222 --user-data-dir=\"C:\ChromeTEMP\"")
-    except:
-        print("크롬을 찾을 수 없음")
+    except BaseException as e:
+        print("*Error :", e)
         exit()
 
     # -- setting -- #
@@ -156,8 +154,7 @@ def do_crawling():
                     input_cellphone_user_info()
             old_url = current_url
 
-
-    except:
-        print("크롬 드라이버를 찾을 수 없음")
+    except BaseException as e:
+        print("*Error :", e)
         exit()
 

@@ -1,6 +1,8 @@
 from PIL import Image
 import os
-
+from DoMachineLearning import DoMLOneImage, DoMLOneSound
+import pandas
+import time
 
 CLEAR = (0, 0, 0, 0)            # 투명
 WHITE = (255, 255, 255, 255)    # 흰색
@@ -17,11 +19,15 @@ class CaptchaImage:
     color_most_right_list = [0 for iii in range(5)]
 
     def __init__(self, name):
-        self.origin_name = name
-        self.origin_image = Image.open(self.origin_name)
-        self.origin_pixel = self.origin_image.load()
-        self.height = self.origin_image.height
-        self.width = self.origin_image.width
+        try:
+            self.origin_image = Image.open(name)
+            self.origin_name = name
+            self.origin_pixel = self.origin_image.load()
+            self.height = self.origin_image.height
+            self.width = self.origin_image.width
+        except FileNotFoundError as e:
+            print("*Error:", e)
+            exit()
 
     # 블러 픽셀 제거 (alpha 값이 255가 아니면 삭제)
     def blur_pixel_delete(self):
@@ -174,26 +180,33 @@ def OneImageProcessing():
     one_target_image.line_delete()
     one_target_image.character_separate()
     for i, each_image in enumerate(one_target_image.each_images):
-        each_image.save("./temp/" + str(i) + ".png")
+        one_target_image.result_text += DoMLOneImage("ImageModel.pkl", each_image)[0]
+        # each_image.save("./temp/" + str(i) + ".png")
+    print(one_target_image.result_text)
 
 
 if __name__ == '__main__':
+    start_time = time.time()
     OneImageProcessing()
-    # exit()
-
-    path_dir = "./보안문자/"     # >> 이미지 파일들이 있는 디렉토리
+    print("Image WorkingTime: %.2f sec" % (time.time() - start_time))
+    
+    start_time = time.time()
+    csv_data = pandas.read_csv("ABCDE.csv")
+    print(DoMLOneSound("SoundModel.pkl", csv_data))
+    print("Sound WorkingTime: %.2f sec" % (time.time() - start_time))
+    exit()
 
     Color_with_line_counter = [0 for a in range(26)]
     Color_no_line_counter = [0 for a in range(26)]
     Black_no_line_counter = [0 for a in range(26)]
 
-    file_list = os.listdir(path_dir)
+    file_list = os.listdir("./보안문자/")
     file_list.sort()
     for file_name in file_list:
-        if os.path.isdir(path_dir + file_name):  # 디렉토리일 경우 넘김
+        if os.path.isdir("./보안문자/" + file_name):  # 디렉토리일 경우 넘김
             continue
-        target_image = CaptchaImage(path_dir + file_name)
-        target_line_image = CaptchaImage(path_dir + file_name)
+        target_image = CaptchaImage("./보안문자/" + file_name)
+        target_line_image = CaptchaImage("./보안문자/" + file_name)
 
         target_image.blur_pixel_delete()
         target_line_image.blur_pixel_delete()
@@ -201,11 +214,11 @@ if __name__ == '__main__':
         target_image.line_delete()
 
         target_image.character_separate()
-        target_image.ImageSave(path_dir + "Black no_line", Black_no_line_counter)
+        target_image.ImageSave("./보안문자/Black no_line", Black_no_line_counter)
 
         target_image.character_separate_color_no_line()
-        target_image.ImageSave(path_dir + "Color no_line", Color_no_line_counter)
+        target_image.ImageSave("./보안문자/Color no_line", Color_no_line_counter)
 
         target_line_image.character_separate_with_line()
-        target_line_image.ImageSave(path_dir + "Color with_line", Color_with_line_counter)
+        target_line_image.ImageSave("./보안문자/Color with_line", Color_with_line_counter)
     print("----------------------------\nDone")
