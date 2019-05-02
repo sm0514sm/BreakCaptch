@@ -40,6 +40,7 @@ def cut_by_null(hey_audio):
     answer = answer[1:,:]
     # np.savetxt('./' + 'asdfasdf' + '.csv', answer, header='Z', fmt='%d')
     delete_listen_wav()
+    return answer
 
 def add_on_answer(alpha, answer):
     new = np.vstack([answer, alpha])
@@ -57,4 +58,4 @@ def delete_listen_wav():
     else: print('file doesn\'t exist')
 
 if __name__ == '__main__':
-    cut_by_null(hey_audio=read('audio/' + "DKEOB" + '.wav'))
+    audio = cut_by_null(hey_audio=read('audio/' + "DKEOB" + '.wav'))
