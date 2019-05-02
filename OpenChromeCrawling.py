@@ -4,6 +4,7 @@
 
 import os
 import time
+import urllib
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
@@ -32,7 +33,9 @@ def get_Captcha_image():
     print("get_Captcha_image() 실행")
     try:
         driver.find_element_by_id("captcha_img").screenshot("captcha.png")
-        driver.find_element_by_class_name("bt_sound").click()
+        captcha = driver.find_elemnt_by_id("captcha")
+        url = "https://sslmember2.gmarket.co.kr/GCaptcha/CurrentSound?encValue="+captcha.get_attribute("value")
+        urllib.request.urlretrieve(url, "captcha.wav")
         return 1
     except BaseException as e:
         print(e)
