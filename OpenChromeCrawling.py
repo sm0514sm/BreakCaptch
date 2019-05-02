@@ -20,6 +20,15 @@ def input_user_info(element_name, value):
         print(e)
         return 0
 
+def get_Captcha_image():
+    print("get_Captcha_image() 실행")
+    try:
+        driver.find_element_by_id("captcha_img").screenshot("captcha.png")
+        driver.find_element_by_class_name("bt_sound").click()
+        return 1
+    except BaseException as e:
+        print(e)
+        return 0
 
 def input_Gmarket_user_info():
     print("input_Gmarket_user_info() 실행")
@@ -31,6 +40,9 @@ def input_Gmarket_user_info():
     except BaseException as e:
         print(e)
         return
+
+    if not get_Captcha_image():
+        print("Captcha 이미지 다운로드 실패")
 
     print("user_info 입력")
 
@@ -135,7 +147,7 @@ def do_crawling():
     chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
     try:
         global driver
-        chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
+        chrome_driver = "C:/Users/Cho/Documents/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
         driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
         # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
