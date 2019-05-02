@@ -14,6 +14,7 @@ from selenium.webdriver.support.ui import Select
 def input_user_info(element_name, value):
     try:
         driver.find_element_by_name(element_name).send_keys(value)
+        
         return 1
     except BaseException as e:
         print(e)
@@ -37,6 +38,7 @@ def input_Gmarket_user_info():
         print("이름 입력 실패")
 
     select = Select(driver.find_element_by_name('naSelect'))
+
     select.select_by_visible_text(user_info["국적"])
 
     if not input_user_info('birth_date', user_info["생년월일"]):

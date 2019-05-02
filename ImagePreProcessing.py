@@ -13,11 +13,6 @@ TEST_NUM = 2   # 주의 : 5개밖에 없는 문자있음. Train 도 고려해야
 
 
 class CaptchaImage:
-    each_images = [None for i in range(5)]
-    result_text = ""
-    color_most_left_list = [999 for ii in range(5)]
-    color_most_right_list = [0 for iii in range(5)]
-
     def __init__(self, name):
         try:
             self.origin_image = Image.open(name)
@@ -25,6 +20,11 @@ class CaptchaImage:
             self.origin_pixel = self.origin_image.load()
             self.height = self.origin_image.height
             self.width = self.origin_image.width
+            self.color_most_left_list = [999 for ii in range(5)]
+            self.color_most_right_list = [0 for iii in range(5)]
+            self.color_lists = []
+            self.each_images = [None for i in range(5)]
+            self.result_text = ""
         except FileNotFoundError as e:
             print("*Error:", e)
             exit()
@@ -42,26 +42,25 @@ class CaptchaImage:
 
         # 다섯가지 색상만이 존재하는 special_height 구하기
         for y in range(5, self.height):
-            global color_lists
-            color_lists = []
+            self.color_lists = []
             for x in range(self.width):
-                if self.origin_pixel[x, y] not in color_lists:
+                if self.origin_pixel[x, y] not in self.color_lists:
                     if self.origin_pixel[x, y] != CLEAR and \
                             (self.origin_pixel[x, y] == self.origin_pixel[x + 2, y]
                              or self.origin_pixel[x, y] == self.origin_pixel[x - 2, y]):
-                        color_lists.append(self.origin_pixel[x, y])
-            if len(color_lists) == 5:
+                        self.color_lists.append(self.origin_pixel[x, y])
+            if len(self.color_lists) == 5:
                 spe_h = y
                 break
 
         # color_lists 에 없는 색상 삭제, 있는 색상은 각 색상 별 최소 x 위치
         for y in range(self.height):
             for x in range(self.width):
-                if self.origin_pixel[x, y] not in color_lists:  # 색상 리스트에 없으면 해당 색상은 삭제
+                if self.origin_pixel[x, y] not in self.color_lists:  # 색상 리스트에 없으면 해당 색상은 삭제
                     self.origin_pixel[x, y] = CLEAR
-                else:  # 색상 리스트에 있으면 해당 위치와 각 색깔 별 최소, 최대 x위치 판별
-                    for i in range(len(color_lists)):
-                        if self.origin_pixel[x, y] == color_lists[i]:
+                elif self.origin_pixel[x, y] in self.color_lists:  # 색상 리스트에 있으면 해당 위치와 각 색깔 별 최소, 최대 x위치 판별
+                    for i in range(len(self.color_lists)):
+                        if self.origin_pixel[x, y] == self.color_lists[i]:
                             self.color_most_left_list[i] = min(self.color_most_left_list[i], x)
                             self.color_most_right_list[i] = max(self.color_most_right_list[i], x)
         return spe_h
@@ -96,6 +95,7 @@ class CaptchaImage:
                         new_pixel[x, y] = WHITE
                     else:
                         new_pixel[x, y] = BLACK
+
             # bg_image 에 new_image 덮어씌우기
             bg_image.paste(new_image, (0, 0, new_image.width, new_image.height))
             new_image = bg_image
@@ -175,26 +175,25 @@ class CaptchaImage:
 
 # ------------------------------------------------------------------------------------------------------------------- #
 def OneImageProcessing():
-    one_target_image = CaptchaImage("./testd.png")
+    one_target_image = CaptchaImage("./testd6.png")
     one_target_image.blur_pixel_delete()
     one_target_image.line_delete()
     one_target_image.character_separate()
     for i, each_image in enumerate(one_target_image.each_images):
         one_target_image.result_text += DoMLOneImage("ImageModel.pkl", each_image)[0]
-        # each_image.save("./temp/" + str(i) + ".png")
+        each_image.save("./temp/" + str(i) + ".png")
     print(one_target_image.result_text)
 
 
 if __name__ == '__main__':
     start_time = time.time()
-    OneImageProcessing()
+    # OneImageProcessing()
     print("Image WorkingTime: %.2f sec" % (time.time() - start_time))
     
     start_time = time.time()
-    csv_data = pandas.read_csv("ABCDE.csv")
-    print(DoMLOneSound("SoundModel.pkl", csv_data))
+    # csv_data = pandas.read_csv("ABCDE.csv")
+    # print(DoMLOneSound("SoundModel.pkl", csv_data))
     print("Sound WorkingTime: %.2f sec" % (time.time() - start_time))
-    exit()
 
     Color_with_line_counter = [0 for a in range(26)]
     Color_no_line_counter = [0 for a in range(26)]
@@ -206,19 +205,20 @@ if __name__ == '__main__':
         if os.path.isdir("./보안문자/" + file_name):  # 디렉토리일 경우 넘김
             continue
         target_image = CaptchaImage("./보안문자/" + file_name)
-        target_line_image = CaptchaImage("./보안문자/" + file_name)
+        # target_line_image = CaptchaImage("./보안문자/" + file_name)
 
         target_image.blur_pixel_delete()
-        target_line_image.blur_pixel_delete()
+        # target_line_image.blur_pixel_delete()
 
         target_image.line_delete()
+        target_image.origin_image.save("./temp/" + file_name + ".png")
 
         target_image.character_separate()
         target_image.ImageSave("./보안문자/Black no_line", Black_no_line_counter)
-
-        target_image.character_separate_color_no_line()
-        target_image.ImageSave("./보안문자/Color no_line", Color_no_line_counter)
-
-        target_line_image.character_separate_with_line()
-        target_line_image.ImageSave("./보안문자/Color with_line", Color_with_line_counter)
+        target_image = None
+        # target_image.character_separate_color_no_line()
+        # target_image.ImageSave("./보안문자/Color no_line", Color_no_line_counter)
+        #
+        # target_line_image.character_separate_with_line()
+        # target_line_image.ImageSave("./보안문자/Color with_line", Color_with_line_counter)
     print("----------------------------\nDone")

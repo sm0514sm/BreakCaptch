@@ -2,7 +2,10 @@
   <dictionary name="LGPC">
     <words>
       <w>abcdefghijklmnopqrstuvwxyz</w>
+      <w>chromedriver</w>
       <w>gmarket</w>
+      <w>gmkt</w>
+      <w>iframe</w>
       <w>lbfgs</w>
       <w>logreg</w>
       <w>testd</w>
