@@ -1,7 +1,877 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="이거 최종임" />
+    <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/LGPC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/LGPC.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImagePreProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImagePreProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testd.png" beforeDir="false" afterPath="$PROJECT_DIR$/testd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/ABFDO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/ACBZB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/AECVA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/ALTTU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/A/ABFDO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/A/ACBZB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/B/ABFDO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/B/ACBZB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/C/ACBZB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/C/AECVA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/D/ABFDO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/D/DKEOB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/E/AECVA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/E/DKEOB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/F/ABFDO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/F/FEARO_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/F/FEARO_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/G/GMMAF_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/G/GMMAF_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/G/GUSLB_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/G/GUSLB_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/H/IENOH_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/H/IENOH_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/H/LBDQH_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/H/LBDQH_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/I/BSXNI_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/I/BSXNI_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/I/IENOH_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/I/IENOH_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/J/JFCXV_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/J/JFCXV_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/J/NJWJA_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/J/NJWJA_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/K/DKEOB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/K/ELKSZ_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/K/ELKSZ_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/L/ALTTU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/L/DWLSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/M/DWMLU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/M/GMMAF_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/M/GMMAF_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/N/BSXNI_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/N/BSXNI_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/N/IENOH_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/N/IENOH_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/O/ABFDO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/O/DKEOB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/P/FRPEF_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/P/FRPEF_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/P/IOZEP_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/P/IOZEP_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Q/DVQWY_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Q/LBDQH_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/Q/LBDQH_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/R/FEARO_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/R/FEARO_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/R/FRPEF_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/R/FRPEF_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/S/BSXNI_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/S/BSXNI_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/S/DWLSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/T/ALTTU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/T/ALTTU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/U/ALTTU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/U/DWMLU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/V/AECVA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/V/DVQWY_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/W/DVQWY_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/W/DWLSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/X/BSXNI_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/X/BSXNI_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/X/DXOSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Y/DVQWY_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Y/GYUGF_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/Y/GYUGF_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Z/ACBZB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/test/Z/ELKSZ_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/test/Z/ELKSZ_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/AECVA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/AECVA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/ALTTU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/FEARO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/GMMAF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/LVGAI_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/LVGAI_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/NJWJA_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/NJWJA_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/OFGQA_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/OFGQA_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/OHMTA_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/OHMTA_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/RESAX_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/RESAX_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/TTAYP_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/TTAYP_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/UIDAG_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/UIDAG_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/A/ZASRE_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/A/ZASRE_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/ACBZB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/BSXNI_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/DKEOB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/GUSLB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/LBDQH_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/B/LBDQH_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/OGWDB_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/B/OGWDB_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/REBZW_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/B/REBZW_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/TBFHQ_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/B/TBFHQ_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/B/UVNWB_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/B/UVNWB_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/C/JFCXV_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/C/KTOIC_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/C/XCCGN_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/C/XCCGN_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/C/XCCGN_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/C/XCCGN_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/DVQWY_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/DWLSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/DWMLU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/DXOSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/LBDQH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/OGWDB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/PDRDF_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/D/PDRDF_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/PDRDF_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/D/PDRDF_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/QDPGS_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/D/QDPGS_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/UIDAG_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/D/UIDAG_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/D/ZTWID_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/D/ZTWID_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/ELKSZ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/FEARO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/FRPEF_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/FRPEF_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/IENOH_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/IENOH_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/IOZEP_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/IOZEP_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/MNFEF_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/MNFEF_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/REBZW_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/REBZW_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/RESAX_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/RESAX_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/ZASRE_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/ZASRE_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/E/ZUGEP_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/E/ZUGEP_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/FRPEF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/FRPEF_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/FRPEF_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/GMMAF_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/GMMAF_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/GYUGF_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/GYUGF_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/JFCXV_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/JFCXV_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/MNFEF_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/MNFEF_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/MNFEF_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/MNFEF_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/OFGQA_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/OFGQA_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/ONFNV_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/ONFNV_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/PDRDF_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/PDRDF_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/QZFLT_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/QZFLT_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/TBFHQ_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/TBFHQ_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/WFFNW_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/WFFNW_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/F/WFFNW_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/F/WFFNW_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/GYUGF_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/GYUGF_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/GYUGF_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/GYUGF_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/LVGAI_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/LVGAI_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OFGQA_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OFGQA_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OGWDB_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OGWDB_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OZVGO_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/OZVGO_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/QDPGS_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/QDPGS_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/UIDAG_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/UIDAG_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XCCGN_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XCCGN_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XGHJH_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XGHJH_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XMGYO_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/XMGYO_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/G/ZUGEP_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/G/ZUGEP_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/H/OHMTA_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/H/OHMTA_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/H/TBFHQ_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/H/TBFHQ_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/H/XGHJH_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/H/XGHJH_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/H/XGHJH_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/H/XGHJH_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/H/YLLHJ_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/H/YLLHJ_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/I/IOZEP_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/I/IOZEP_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/I/KTOIC_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/I/KTOIC_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/I/LVGAI_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/I/LVGAI_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/I/UIDAG_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/I/UIDAG_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/I/ZTWID_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/I/ZTWID_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/NJWJA_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/NJWJA_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/PSPJK_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/PSPJK_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/QJSQZ_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/QJSQZ_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/XGHJH_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/XGHJH_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/YLLHJ_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/YLLHJ_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/J/ZJZQN_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/J/ZJZQN_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/K/KTOIC_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/K/PSPJK_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/K/PSPJK_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/K/WRNKQ_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/K/WRNKQ_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/DWMLU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/ELKSZ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/GUSLB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/LBDQH_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/L/LBDQH_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/LVGAI_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/L/LVGAI_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/QZFLT_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/L/QZFLT_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/YLLHJ_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/L/YLLHJ_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/L/YLLHJ_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/L/YLLHJ_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/M/GMMAF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/M/MNFEF_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/M/MNFEF_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/M/OHMTA_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/M/OHMTA_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/M/XMGYO_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/M/XMGYO_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/MNFEF_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/MNFEF_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/NJWJA_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/NJWJA_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ONFNV_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ONFNV_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ONFNV_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ONFNV_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/UVNWB_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/UVNWB_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/WFFNW_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/WFFNW_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/WRNKQ_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/WRNKQ_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/XCCGN_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/XCCGN_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ZJZQN_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/N/ZJZQN_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/DWLSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/DXOSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/DXOSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/FEARO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/IENOH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/IOZEP_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/IOZEP_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/KTOIC_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/KTOIC_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OFGQA_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OFGQA_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OGWDB_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OGWDB_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OHMTA_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OHMTA_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/ONFNV_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/ONFNV_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OZVGO_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OZVGO_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OZVGO_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/OZVGO_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/O/XMGYO_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/O/XMGYO_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PDRDF_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PDRDF_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PSPJK_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PSPJK_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PSPJK_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/PSPJK_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/QDPGS_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/QDPGS_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/TTAYP_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/TTAYP_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/P/ZUGEP_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/P/ZUGEP_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/OFGQA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QDPGS_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QDPGS_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QJSQZ_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QJSQZ_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QJSQZ_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QJSQZ_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QZFLT_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/QZFLT_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/TBFHQ_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/TBFHQ_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/WRNKQ_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/WRNKQ_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/ZJZQN_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Q/ZJZQN_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/R/PDRDF_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/R/PDRDF_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/R/REBZW_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/R/REBZW_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/R/RESAX_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/R/RESAX_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/R/WRNKQ_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/R/WRNKQ_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/R/ZASRE_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/R/ZASRE_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/DXOSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/ELKSZ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/GUSLB_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/GUSLB_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/PSPJK_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/PSPJK_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/QDPGS_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/QDPGS_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/QJSQZ_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/QJSQZ_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/RESAX_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/RESAX_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/S/ZASRE_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/S/ZASRE_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/KTOIC_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/OHMTA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/QZFLT_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/T/QZFLT_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TBFHQ_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TBFHQ_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TTAYP_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TTAYP_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TTAYP_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/T/TTAYP_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/T/ZTWID_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/T/ZTWID_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/U/GUSLB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/U/GYUGF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/U/UIDAG_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/U/UIDAG_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/U/UVNWB_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/U/UVNWB_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/U/ZUGEP_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/U/ZUGEP_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/V/JFCXV_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/V/LVGAI_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/V/ONFNV_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/V/ONFNV_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/V/OZVGO_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/V/OZVGO_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/V/UVNWB_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/V/UVNWB_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/DWMLU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/NJWJA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/OGWDB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/REBZW_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/REBZW_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/UVNWB_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/UVNWB_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WFFNW_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WFFNW_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WFFNW_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WFFNW_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WRNKQ_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/WRNKQ_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/W/ZTWID_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/W/ZTWID_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/X/JFCXV_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/X/RESAX_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/X/RESAX_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XCCGN_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XCCGN_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XGHJH_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XGHJH_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XMGYO_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/X/XMGYO_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Y/TTAYP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Y/XMGYO_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Y/XMGYO_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Y/YLLHJ_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Y/YLLHJ_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/IOZEP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/OZVGO_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/OZVGO_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/QJSQZ_result_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/QJSQZ_result_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/QZFLT_result_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/QZFLT_result_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/REBZW_result_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/REBZW_result_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZASRE_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZASRE_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZJZQN_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZJZQN_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZJZQN_result_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZJZQN_result_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZTWID_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZTWID_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZUGEP_result_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/보안문자/Black no_line/train/Z/ZUGEP_result_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/A/ABFDO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/A/ACBZB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/B/ABFDO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/B/ACBZB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/C/ACBZB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/C/AECVA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/D/ABFDO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/D/DKEOB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/E/AECVA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/E/DKEOB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/F/ABFDO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/F/FEARO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/G/GMMAF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/G/GUSLB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/H/IENOH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/H/LBDQH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/I/BSXNI_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/I/IENOH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/J/JFCXV_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/J/NJWJA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/K/DKEOB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/K/ELKSZ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/L/ALTTU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/L/DWLSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/M/DWMLU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/M/GMMAF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/N/BSXNI_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/N/IENOH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/O/ABFDO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/O/DKEOB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/P/FRPEF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/P/IOZEP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Q/DVQWY_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Q/LBDQH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/R/FEARO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/R/FRPEF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/S/BSXNI_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/S/DWLSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/T/ALTTU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/T/ALTTU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/U/ALTTU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/U/DWMLU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/V/AECVA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/V/DVQWY_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/W/DVQWY_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/W/DWLSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/X/BSXNI_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/X/DXOSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Y/DVQWY_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Y/GYUGF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Z/ACBZB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/test/Z/ELKSZ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/AECVA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/AECVA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/ALTTU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/FEARO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/GMMAF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/LVGAI_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/NJWJA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/OFGQA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/OHMTA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/RESAX_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/TTAYP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/UIDAG_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/A/ZASRE_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/ACBZB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/BSXNI_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/DKEOB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/GUSLB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/LBDQH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/OGWDB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/REBZW_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/TBFHQ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/B/UVNWB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/C/JFCXV_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/C/KTOIC_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/C/XCCGN_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/C/XCCGN_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/DVQWY_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/DWLSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/DWMLU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/DXOSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/LBDQH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/OGWDB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/PDRDF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/PDRDF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/QDPGS_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/UIDAG_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/D/ZTWID_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/ELKSZ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/FEARO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/FRPEF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/IENOH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/IOZEP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/MNFEF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/REBZW_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/RESAX_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/ZASRE_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/E/ZUGEP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/FRPEF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/FRPEF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/GMMAF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/GYUGF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/JFCXV_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/MNFEF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/MNFEF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/OFGQA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/ONFNV_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/PDRDF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/QZFLT_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/TBFHQ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/WFFNW_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/F/WFFNW_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/GYUGF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/GYUGF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/LVGAI_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/OFGQA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/OGWDB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/OZVGO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/QDPGS_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/UIDAG_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/XCCGN_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/XGHJH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/XMGYO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/G/ZUGEP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/H/OHMTA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/H/TBFHQ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/H/XGHJH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/H/XGHJH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/H/YLLHJ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/I/IOZEP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/I/KTOIC_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/I/LVGAI_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/I/UIDAG_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/I/ZTWID_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/NJWJA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/PSPJK_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/QJSQZ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/XGHJH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/YLLHJ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/J/ZJZQN_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/K/KTOIC_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/K/PSPJK_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/K/WRNKQ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/DWMLU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/ELKSZ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/GUSLB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/LBDQH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/LVGAI_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/QZFLT_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/YLLHJ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/L/YLLHJ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/M/GMMAF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/M/MNFEF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/M/OHMTA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/M/XMGYO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/MNFEF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/NJWJA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/ONFNV_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/ONFNV_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/UVNWB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/WFFNW_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/WRNKQ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/XCCGN_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/N/ZJZQN_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/DWLSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/DXOSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/DXOSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/FEARO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/IENOH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/IOZEP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/KTOIC_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/OFGQA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/OGWDB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/OHMTA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/ONFNV_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/OZVGO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/OZVGO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/O/XMGYO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/PDRDF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/PSPJK_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/PSPJK_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/QDPGS_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/TTAYP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/P/ZUGEP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/OFGQA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/QDPGS_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/QJSQZ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/QJSQZ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/QZFLT_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/TBFHQ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/WRNKQ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Q/ZJZQN_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/R/PDRDF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/R/REBZW_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/R/RESAX_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/R/WRNKQ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/R/ZASRE_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/DXOSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/ELKSZ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/GUSLB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/PSPJK_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/QDPGS_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/QJSQZ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/RESAX_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/S/ZASRE_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/KTOIC_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/OHMTA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/QZFLT_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/TBFHQ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/TTAYP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/TTAYP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/T/ZTWID_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/U/GUSLB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/U/GYUGF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/U/UIDAG_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/U/UVNWB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/U/ZUGEP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/V/JFCXV_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/V/LVGAI_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/V/ONFNV_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/V/OZVGO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/V/UVNWB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/DWMLU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/NJWJA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/OGWDB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/REBZW_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/UVNWB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/WFFNW_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/WFFNW_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/WRNKQ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/W/ZTWID_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/X/JFCXV_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/X/RESAX_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/X/XCCGN_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/X/XGHJH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/X/XMGYO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Y/TTAYP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Y/XMGYO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Y/YLLHJ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/IOZEP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/OZVGO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/QJSQZ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/QZFLT_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/REBZW_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/ZASRE_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/ZJZQN_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/ZJZQN_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/ZTWID_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color no_line/train/Z/ZUGEP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/A/ABFDO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/A/ACBZB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/B/ABFDO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/B/ACBZB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/C/ACBZB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/C/AECVA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/D/ABFDO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/D/DKEOB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/E/AECVA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/E/DKEOB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/F/ABFDO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/F/FEARO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/G/GMMAF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/G/GUSLB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/H/IENOH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/H/LBDQH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/I/BSXNI_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/I/IENOH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/J/JFCXV_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/J/NJWJA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/K/DKEOB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/K/ELKSZ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/L/ALTTU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/L/DWLSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/M/DWMLU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/M/GMMAF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/N/BSXNI_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/N/IENOH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/O/ABFDO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/O/DKEOB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/P/FRPEF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/P/IOZEP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Q/DVQWY_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Q/LBDQH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/R/FEARO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/R/FRPEF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/S/BSXNI_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/S/DWLSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/T/ALTTU_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/T/ALTTU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/U/ALTTU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/U/DWMLU_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/V/AECVA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/V/DVQWY_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/W/DVQWY_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/W/DWLSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/X/BSXNI_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/X/DXOSO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Y/DVQWY_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Y/GYUGF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Z/ACBZB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/test/Z/ELKSZ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/AECVA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/AECVA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/ALTTU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/FEARO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/GMMAF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/LVGAI_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/NJWJA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/OFGQA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/OHMTA_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/RESAX_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/TTAYP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/UIDAG_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/A/ZASRE_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/ACBZB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/BSXNI_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/DKEOB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/GUSLB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/LBDQH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/OGWDB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/REBZW_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/TBFHQ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/B/UVNWB_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/C/JFCXV_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/C/KTOIC_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/C/XCCGN_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/C/XCCGN_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/DVQWY_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/DWLSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/DWMLU_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/DXOSO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/LBDQH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/OGWDB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/PDRDF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/PDRDF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/QDPGS_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/UIDAG_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/D/ZTWID_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/ELKSZ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/FEARO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/FRPEF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/IENOH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/IOZEP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/MNFEF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/REBZW_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/RESAX_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/ZASRE_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/E/ZUGEP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/FRPEF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/FRPEF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/GMMAF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/GYUGF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/JFCXV_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/MNFEF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/MNFEF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/OFGQA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/ONFNV_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/PDRDF_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/QZFLT_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/TBFHQ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/WFFNW_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/F/WFFNW_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/GYUGF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/GYUGF_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/LVGAI_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/OFGQA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/OGWDB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/OZVGO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/QDPGS_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/UIDAG_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/XCCGN_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/XGHJH_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/XMGYO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/G/ZUGEP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/H/OHMTA_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/H/TBFHQ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/H/XGHJH_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/H/XGHJH_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/H/YLLHJ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/I/IOZEP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/I/KTOIC_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/I/LVGAI_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/I/UIDAG_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/I/ZTWID_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/NJWJA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/PSPJK_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/QJSQZ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/XGHJH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/YLLHJ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/J/ZJZQN_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/K/KTOIC_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/K/PSPJK_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/K/WRNKQ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/DWMLU_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/ELKSZ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/GUSLB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/LBDQH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/LVGAI_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/QZFLT_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/YLLHJ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/L/YLLHJ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/M/GMMAF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/M/MNFEF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/M/OHMTA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/M/XMGYO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/MNFEF_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/NJWJA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/ONFNV_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/ONFNV_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/UVNWB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/WFFNW_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/WRNKQ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/XCCGN_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/N/ZJZQN_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/DWLSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/DXOSO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/DXOSO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/FEARO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/IENOH_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/IOZEP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/KTOIC_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/OFGQA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/OGWDB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/OHMTA_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/ONFNV_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/OZVGO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/OZVGO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/O/XMGYO_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/PDRDF_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/PSPJK_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/PSPJK_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/QDPGS_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/TTAYP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/P/ZUGEP_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/OFGQA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/QDPGS_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/QJSQZ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/QJSQZ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/QZFLT_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/TBFHQ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/WRNKQ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Q/ZJZQN_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/R/PDRDF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/R/REBZW_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/R/RESAX_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/R/WRNKQ_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/R/ZASRE_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/DXOSO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/ELKSZ_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/GUSLB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/PSPJK_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/QDPGS_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/QJSQZ_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/RESAX_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/S/ZASRE_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/KTOIC_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/OHMTA_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/QZFLT_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/TBFHQ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/TTAYP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/TTAYP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/T/ZTWID_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/U/GUSLB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/U/GYUGF_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/U/UIDAG_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/U/UVNWB_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/U/ZUGEP_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/V/JFCXV_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/V/LVGAI_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/V/ONFNV_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/V/OZVGO_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/V/UVNWB_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/DWMLU_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/NJWJA_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/OGWDB_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/REBZW_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/UVNWB_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/WFFNW_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/WFFNW_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/WRNKQ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/W/ZTWID_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/X/JFCXV_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/X/RESAX_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/X/XCCGN_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/X/XGHJH_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/X/XMGYO_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Y/TTAYP_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Y/XMGYO_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Y/YLLHJ_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/IOZEP_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/OZVGO_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/QJSQZ_result_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/QZFLT_result_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/REBZW_result_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/ZASRE_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/ZJZQN_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/ZJZQN_result_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/ZTWID_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/Color with_line/train/Z/ZUGEP_result_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/DKEOB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/DVQWY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/DWLSO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/DWMLU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/보안문자/DXOSO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ABFDO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ABFDOnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ACBZB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ACBZBnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/AECVA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/AECVAnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ALTTU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ALTTUnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/BSXNI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/BSXNInoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DKEOB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DKEOBnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DVQWY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DVQWYnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DWLSO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DWLSOnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DWMLU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DWMLUnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DXOSO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/DXOSOnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ELKSZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ELKSZnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/FEARO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/FEAROnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/FRPEF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/FRPEFnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GMMAF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GMMAFnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GUSLB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GUSLBnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GYUGF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/GYUGFnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/IENOH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/IENOHnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/IOZEP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/IOZEPnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/JFCXV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/JFCXVnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/KTOIC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/KTOICnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/LBDQH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/LBDQHnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/LVGAI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/LVGAInoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/MNFEF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/MNFEFnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/NJWJA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/NJWJAnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OFGQA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OFGQAnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OGWDB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OGWDBnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OHMTA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OHMTAnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ONFNV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ONFNVnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OZVGO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/OZVGOnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/PDRDF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/PDRDFnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/PSPJK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/PSPJKnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QDPGS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QDPGSnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QJSQZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QJSQZnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QZFLT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/QZFLTnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/REBZW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/REBZWnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/RESAX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/RESAXnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/TBFHQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/TBFHQnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/TTAYP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/TTAYPnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/UIDAG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/UIDAGnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/UVNWB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/UVNWBnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/WFFNW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/WFFNWnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/WRNKQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/WRNKQnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XCCGN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XCCGNnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XGHJH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XGHJHnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XMGYO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/XMGYOnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/YLLHJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/YLLHJnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZASRE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZASREnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZJZQN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZJZQNnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZTWID.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZTWIDnoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZUGEP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시/ZUGEPnoline.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,19 +881,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/speech.py">
+        <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="774">
+              <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+              <folding>
+                <element signature="e#131#156#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AudioPreprocessing.py">
+        <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+            <state relative-caret-position="-306">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AudioRecongization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="56" column="19" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="19" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -32,22 +917,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DrawAudio.py">
+        <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="349">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+        <entry file="file://$PROJECT_DIR$/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1577">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="547">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,7 +949,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>speech</find>
-      <find>do_cr</find>
+      <find>크롬 드라이버</find>
+      <find>path_dir</find>
+      <find>path_dir +</find>
+      <find>print</find>
+      <find>driver 선언</find>
+      <find>driver</find>
+      <find>color_list</find>
+      <find>color_most_</find>
+      <find>iozep</find>
+      <find>ioze</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,21 +968,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
         <option value="$PROJECT_DIR$/speech.py" />
-        <option value="$PROJECT_DIR$/DrawAudio.py" />
         <option value="$PROJECT_DIR$/AudioRecongization.py" />
-        <option value="$PROJECT_DIR$/AudioPreprocessing.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/DoMachineLearning.py" />
+        <option value="$PROJECT_DIR$/OpenChromeCrawling.py" />
+        <option value="$PROJECT_DIR$/ImagePreProcessing.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
+    <option name="x" value="675" />
+    <option name="width" value="700" />
     <option name="height" value="735" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -111,7 +1003,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,7 +1017,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AudioRecongization">
+  <component name="RunManager" selected="Python.ImagePreProcessing">
     <configuration name="AudioRecongization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Break Captcha" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +1030,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\AJOU\Desktop\git\BreakCaptcha\AudioPreprocessing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AudioRecongization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +1039,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DrawAudio" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DoMachineLearning" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Break Captcha" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,7 +1051,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DrawAudio.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DoMachineLearning.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,7 +1081,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="OpenChromeCrawling" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ImagePreProcessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Break Captcha" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -201,7 +1093,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenChromeCrawling.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ImagePreProcessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,11 +1125,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AudioRecongization" />
-        <item itemvalue="Python.DrawAudio" />
+        <item itemvalue="Python.ImagePreProcessing" />
+        <item itemvalue="Python.DoMachineLearning" />
         <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.AudioRecongization" />
         <item itemvalue="Python.speech" />
-        <item itemvalue="Python.OpenChromeCrawling" />
       </list>
     </recent_temporary>
   </component>
@@ -259,151 +1151,121 @@
       <option name="project" value="LOCAL" />
       <updated>1554349329806</updated>
     </task>
-    <task id="LOCAL-00002" summary="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드">
-      <created>1554349595737</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1554349595737</updated>
-    </task>
-    <task id="LOCAL-00003" summary="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드임 (주석참고)">
-      <created>1554349853151</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1554349853151</updated>
-    </task>
-    <task id="LOCAL-00004" summary="송연주: 음성을 알파벳단위로 자름 (0이 3451개) + 패딩(11000)도 완료">
-      <created>1555310440227</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1555310440227</updated>
-    </task>
-    <task id="LOCAL-00005" summary="송연주: 음성 0기준으로 자르기 완료 (디버깅까지 완료)">
-      <created>1555485587339</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1555485587339</updated>
-    </task>
-    <task id="LOCAL-00006" summary="송연주: 모듈화 바로전단계(함수쪼개기+배열하나로+오디오파일삭제)">
-      <created>1556772962816</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1556772962817</updated>
-    </task>
-    <task id="LOCAL-00007" summary="이거 풀전에 임시저장">
-      <created>1556773097505</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1556773097505</updated>
-    </task>
-    <task id="LOCAL-00008" summary="이거 최종임">
-      <created>1556773607641</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1556773607641</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15104167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1559815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79092264" visible="true" weight="0.33114755" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49772382" weight="0.39600664" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966952" visible="true" weight="0.26241136" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49776787" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.20907739" side_tool="true" visible="true" weight="0.33114755" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50033045" side_tool="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15625" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.33442622" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49776787" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" visible="true" weight="0.33442622" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드" />
-    <MESSAGE value="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드임 (주석참고)" />
-    <MESSAGE value="송연주: 음성을 알파벳단위로 자름 (0이 3451개) + 패딩(11000)도 완료" />
-    <MESSAGE value="송연주: 음성 0기준으로 자르기 완료 (디버깅까지 완료)" />
-    <MESSAGE value="송연주: 모듈화 바로전단계(함수쪼개기+배열하나로+오디오파일삭제)" />
-    <MESSAGE value="이거 풀전에 임시저장" />
-    <MESSAGE value="이거 최종임" />
-    <option name="LAST_COMMIT_MESSAGE" value="이거 최종임" />
+    <option name="LAST_COMMIT_MESSAGE" value="송연주: 음성을 시간구간에 따라 5등분해서 저장하는 코드" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GUI.py">
+    <entry file="file://$PROJECT_DIR$/speech.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/machine test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="-1144" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NaverCSRtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-891">
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech.py">
+    <entry file="file://$PROJECT_DIR$/SoundAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DrawAudio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AudioPreprocessing.py">
+    <entry file="file://$PROJECT_DIR$/ReadExelTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+        <state relative-caret-position="-99">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenChromeCrawling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AudioRecongization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="19" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoMachineLearning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+          <folding>
+            <element signature="e#131#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImagePreProcessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
