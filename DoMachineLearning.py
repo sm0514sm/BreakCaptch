@@ -98,12 +98,11 @@ def DoMLOneImage(model_name, target_image):
 
 # 음성 1개에 대한 ML을 진행해 결과를 return
 def DoMLOneSound(model_name, csv_data):
-    header = list(csv_data.columns)
     row_count = len(csv_data)
-    column_count = len(header)
-    csv_array = csv_data.values  # header 값을 제외한 값들
+    column_count = csv_data.ndim
+    csv_array = csv_data
     test = []
-    for j in range(column_count):
+    for j in range(5):
         temp = []
         for i in range(row_count):
             temp.append(csv_array[i][j])

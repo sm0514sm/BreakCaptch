@@ -4,6 +4,8 @@ import os #디렉터리 생성
 import sys
 import numpy as np
 from scipy.io.wavfile import read
+from DoMachineLearning import DoMLOneImage, DoMLOneSound
+
 
 MAX_SIZE = 7000
 NULL_SIZE = 3450
@@ -58,4 +60,7 @@ def delete_listen_wav():
     else: print('file doesn\'t exist')
 
 if __name__ == '__main__':
-    audio = cut_by_null(hey_audio=read('audio/' + "DKEOB" + '.wav'))
+    audio = cut_by_null(hey_audio=read('audio/' + "listen (12)" + '.wav'))
+    audio = audio.T
+    print(DoMLOneSound("SoundModel.pkl", audio))
+
