@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/AudioPreprocessing.py" afterDir="false" />
-    </list>
+    <list default="true" id="6da9ddeb-52d1-4449-b61a-e1bec6c8ffeb" name="Default Changelist" comment="이거 최종임" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AudioPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+            <state relative-caret-position="282">
+              <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -304,11 +301,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556773097505</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="이거 최종임">
+      <created>1556773607641</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556773607641</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15104167" />
@@ -356,7 +360,8 @@
     <MESSAGE value="송연주: 음성 0기준으로 자르기 완료 (디버깅까지 완료)" />
     <MESSAGE value="송연주: 모듈화 바로전단계(함수쪼개기+배열하나로+오디오파일삭제)" />
     <MESSAGE value="이거 풀전에 임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="이거 풀전에 임시저장" />
+    <MESSAGE value="이거 최종임" />
+    <option name="LAST_COMMIT_MESSAGE" value="이거 최종임" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GUI.py">
@@ -395,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AudioPreprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        <state relative-caret-position="282">
+          <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
