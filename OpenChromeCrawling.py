@@ -9,16 +9,24 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 
 
+successInput = False
+
+
 # element_name 에 value 를 입력
 # 성공 1, 실패 0
 def input_user_info(element_name, value):
+    if driver.find_element_by_name(element_name).text != "":
+        print("비어있지 않음")
+        return 0
+    print(">"+driver.find_element_by_name(element_name).text+"<")
+    print(type(driver.find_element_by_name(element_name)))  # selenium.webdriver.remote.webelement.WebElement
     try:
         driver.find_element_by_name(element_name).send_keys(value)
-        
         return 1
     except BaseException as e:
         print(e)
         return 0
+
 
 def get_Captcha_image():
     print("get_Captcha_image() 실행")
@@ -29,6 +37,7 @@ def get_Captcha_image():
     except BaseException as e:
         print(e)
         return 0
+
 
 def input_Gmarket_user_info():
     print("input_Gmarket_user_info() 실행")
@@ -66,6 +75,9 @@ def input_Gmarket_user_info():
 
     if not input_user_info('cellphone_num', user_info["휴대폰번호"]):
         print("휴대폰 번호 입력 실패")
+        successInput = False
+    global successInput
+    successInput = True
 
 
 def input_cellphone_user_info():
@@ -147,26 +159,35 @@ def do_crawling():
     chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
     try:
         global driver
-        chrome_driver = "C:/Users/Cho/Documents/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
+        chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
         driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
         # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
         # driver.get(
         #    "https://sslmember2.gmarket.co.kr/FindID/FindID?targetUrl=http%3a%2f%2fwww.gmarket.co.kr%2f%3fredirect%3d1")
         while True:
+            try:
+                iframe = driver.find_element_by_xpath("//div[@id='GmktPopLayer']/div[@id='popLayer1']/"
+                                                      "div[@id='popLayerContents1']/iframe[@name='popLayerIframe1']")
+
+            except BaseException as e:
+                print(e)
+                successInput = False
+
             time.sleep(1)
             driver.switch_to.window(driver.window_handles[-1])
-            driver.implicitly_wait(3)
+
             current_url = driver.current_url
             old_url = ""
             print(current_url)
             # TODO 계속 실행됨
-            if old_url != current_url:
-                if "sslmember2.gmarket.co.kr/FindID" in current_url:
-                    input_Gmarket_user_info()
-                elif "mobile-ok.com/SimplePop" in current_url:
-                    input_cellphone_user_info()
-            old_url = current_url
+            if successInput is False:
+                if old_url != current_url:
+                    if "sslmember2.gmarket.co.kr/FindID" in current_url:
+                        input_Gmarket_user_info()
+                    elif "mobile-ok.com/SimplePop" in current_url:
+                        input_cellphone_user_info()
+                old_url = current_url
 
     except BaseException as e:
         print("*Error :", e)
