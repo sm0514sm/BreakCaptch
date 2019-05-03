@@ -4,7 +4,7 @@
 
 import os
 import time
-import urllib
+import urllib.request
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
@@ -33,8 +33,9 @@ def get_Captcha_image():
     print("get_Captcha_image() 실행")
     try:
         driver.find_element_by_id("captcha_img").screenshot("captcha.png")
-        captcha = driver.find_elemnt_by_id("captcha")
-        url = "https://sslmember2.gmarket.co.kr/GCaptcha/CurrentSound?encValue="+captcha.get_attribute("value")
+        captcha = driver.find_element_by_id("captcha")
+        value = captcha.get_attribute("value")
+        url = "https://sslmember2.gmarket.co.kr/GCaptcha/CurrentSound?encValue="+value
         urllib.request.urlretrieve(url, "captcha.wav")
         return 1
     except BaseException as e:
@@ -75,11 +76,11 @@ def input_Gmarket_user_info():
 
     select = Select(driver.find_element_by_name('carrier_sel'))
     select.select_by_visible_text(user_info["통신사"])
+    global successInput
 
     if not input_user_info('cellphone_num', user_info["휴대폰번호"]):
         print("휴대폰 번호 입력 실패")
         successInput = False
-    global successInput
     successInput = True
 
 
@@ -162,7 +163,7 @@ def do_crawling():
     chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
     try:
         global driver
-        chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
+        chrome_driver = "C:/Users/Cho/Documents/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
         driver = webdriver.Chrome(chrome_driver, options=chrome_options)
 
         # 웹페이지 이동, 완전히 로딩되야 넘어가서 시간이 걸림
