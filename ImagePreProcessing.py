@@ -174,15 +174,14 @@ class CaptchaImage:
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
-def OneImageProcessing():
-    one_target_image = CaptchaImage("./testd6.png")
+def OneImageProcessingAndML():
+    one_target_image = CaptchaImage("./captcha.png")
     one_target_image.blur_pixel_delete()
     one_target_image.line_delete()
     one_target_image.character_separate()
     for i, each_image in enumerate(one_target_image.each_images):
         one_target_image.result_text += DoMLOneImage("ImageModel.pkl", each_image)[0]
-        each_image.save("./temp/" + str(i) + ".png")
-    print(one_target_image.result_text)
+    return one_target_image.result_text
 
 
 if __name__ == '__main__':

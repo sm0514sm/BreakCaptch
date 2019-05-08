@@ -10,6 +10,7 @@ from DoMachineLearning import DoMLOneImage, DoMLOneSound
 MAX_SIZE = 7000
 NULL_SIZE = 3450
 
+
 def cut_by_null(hey_audio):
     anp = np.array(hey_audio[1], dtype=int)
     # 음성 파일 가져오기 <- 원래는 웹페이지에서 가져와야함.
@@ -44,14 +45,17 @@ def cut_by_null(hey_audio):
     delete_listen_wav()
     return answer
 
+
 def add_on_answer(alpha, answer):
     new = np.vstack([answer, alpha])
     return new
+
 
 def pad_null(without_null):
     pad = np.zeros(MAX_SIZE - without_null.size)
     with_null = np.append(without_null, pad)
     return with_null
+
 
 def delete_listen_wav():
     file = './listen.wav'
@@ -59,8 +63,16 @@ def delete_listen_wav():
         os.remove(file)
     else: print('file doesn\'t exist')
 
+
+def OneSoundProcessingAndML():
+    audio = cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
+    audio = audio.T
+    result = DoMLOneSound("SoundModel.pkl", audio)
+    return result[0] + result[1] + result[2] + result[3] + result[4]
+
+
 if __name__ == '__main__':
-    audio = cut_by_null(hey_audio=read('audio/' + "listen (12)" + '.wav'))
+    audio = cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
     print(DoMLOneSound("SoundModel.pkl", audio))
 
