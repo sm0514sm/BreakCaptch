@@ -1,6 +1,6 @@
 from PIL import Image
 import os
-from DoMachineLearning import DoMLOneImage, DoMLOneSound
+from DoMachineLearning import ImageMachine
 import pandas
 import time
 
@@ -18,6 +18,7 @@ class CaptchaImage:
             self.origin_image = Image.open(name)
             self.origin_name = name
             self.origin_pixel = self.origin_image.load()
+
             self.height = self.origin_image.height
             self.width = self.origin_image.width
             self.color_most_left_list = [999 for ii in range(5)]
@@ -174,20 +175,20 @@ class CaptchaImage:
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
-def OneImageProcessing():
-    one_target_image = CaptchaImage("./testd6.png")
+def OneImageProcessingAndML():
+    one_target_image = CaptchaImage("./captcha.png")
     one_target_image.blur_pixel_delete()
     one_target_image.line_delete()
     one_target_image.character_separate()
     for i, each_image in enumerate(one_target_image.each_images):
-        one_target_image.result_text += DoMLOneImage("ImageModel.pkl", each_image)[0]
-        each_image.save("./temp/" + str(i) + ".png")
-    print(one_target_image.result_text)
+        one_target_image.result_text += ImageMachine.DoMLOneImage("ImageModel.pkl", each_image)[0]
+    return one_target_image.result_text
 
 
 if __name__ == '__main__':
     start_time = time.time()
-    # OneImageProcessing()
+    print(OneImageProcessingAndML())
+    exit()
     print("Image WorkingTime: %.2f sec" % (time.time() - start_time))
     
     start_time = time.time()
