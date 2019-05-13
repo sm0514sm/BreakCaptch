@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import OpenChromeCrawling
+from OpenChromeCrawling import Crawler
 
 
 # 개인정보입력 창
@@ -79,7 +79,7 @@ class LogInDialog(QDialog):
                 self.sex = self.rbtn2.text()
         #self.nation = self.text1
         #self.agency = self.text2
-        OpenChromeCrawling.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
+        crawler.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
         self.close()
 
 
@@ -122,12 +122,13 @@ class MyWindow(QWidget):
     # 크롬 열기
     def openCrome(self):
         # TODO do_crawling()이 돌아가는 동안 GUI 가 완전히 먹통됨 >> do_crawling 을 subprocess 로 작동 필요
-        OpenChromeCrawling.do_crawling()
+        crawler.do_crawling()
         print('열려라 디버깅크롬크롬')
             
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    crawler = Crawler()
     window = MyWindow()
     window.show()
     app.exec_()
