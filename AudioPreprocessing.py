@@ -1,10 +1,9 @@
 from pydub import AudioSegment #음성 편집
 import wave
-import os #디렉터리 생성
-import sys
+import os  # 디렉터리 생성
 import numpy as np
 from scipy.io.wavfile import read
-from DoMachineLearning import DoMLOneImage, DoMLOneSound
+from DoMachineLearning import SoundMachine
 
 
 MAX_SIZE = 7000
@@ -67,12 +66,12 @@ def delete_listen_wav():
 def OneSoundProcessingAndML():
     audio = cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
-    result = DoMLOneSound("SoundModel.pkl", audio)
+    result = SoundMachine.DoMLOneSound("SoundModel.pkl", audio)
     return result[0] + result[1] + result[2] + result[3] + result[4]
 
 
 if __name__ == '__main__':
     audio = cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
-    print(DoMLOneSound("SoundModel.pkl", audio))
+    print(SoundMachine.DoMLOneSound("SoundModel.pkl", audio))
 
