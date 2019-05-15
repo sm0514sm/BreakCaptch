@@ -9,7 +9,7 @@ import threading
 class LogInDialog(QDialog):
     def __init__(self):
         super().__init__()
-        self.refresh()
+        #self.refresh()
         self.setupUI()
         self.id = None
         self.password = None
@@ -32,8 +32,8 @@ class LogInDialog(QDialog):
         label4 = QLabel("Chrome.exe 경로: ")
         label5 = QLabel("Chromedriver.exe 경로: ")
         label6 = QLabel("국적")
-        label7 = QLabel("통신사")
-        label8 = QLabel("성별")
+        label8 = QLabel("통신사")
+        label7 = QLabel("성별")
         self.label6 = QLabel('', self)
         self.label6.move(50, 150)
 
@@ -103,6 +103,7 @@ class LogInDialog(QDialog):
             if (i == 7): self.driver = line
 
         info.close()
+
     def pushButtonClicked(self):
         self.id = self.lineEdit1.text()
         self.password = self.lineEdit2.text()
@@ -130,7 +131,7 @@ class LogInDialog(QDialog):
 
         #self.nation = self.text1
         #self.agency = self.text2
-        #OpenChromeCrawling.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
+        crawler.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
         self.close()
 
 
