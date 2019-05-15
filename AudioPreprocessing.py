@@ -9,7 +9,8 @@ from DoMachineLearning import SoundMachine
 MAX_SIZE = 7000
 NULL_SIZE = 3450
 
-class Audio_Preprocessing:
+
+class CaptchaAudio:
     def cut_by_null(self, hey_audio):
         anp = np.array(hey_audio[1], dtype=int)
         # 음성 파일 가져오기 <- 원래는 웹페이지에서 가져와야함.
@@ -61,8 +62,9 @@ class Audio_Preprocessing:
         else:
             print('file doesn\'t exist')
 
+
 def OneSoundProcessingAndML():
-    pre = Audio_Preprocessing()
+    pre = CaptchaAudio()
     audio = pre.cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
     result = SoundMachine.DoMLOneSound("SoundModel.pkl", audio)
@@ -70,7 +72,7 @@ def OneSoundProcessingAndML():
 
 
 if __name__ == '__main__':
-    pre2 = Audio_Preprocessing()
+    pre2 = CaptchaAudio()
     audio = pre2.cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
     print(SoundMachine.DoMLOneSound("SoundModel.pkl", audio))

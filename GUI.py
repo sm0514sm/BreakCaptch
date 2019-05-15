@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from OpenChromeCrawling import Crawler
+import threading
 
 
 # 개인정보입력 창
@@ -121,10 +122,9 @@ class MyWindow(QWidget):
 
     # 크롬 열기
     def openCrome(self):
-        # TODO do_crawling()이 돌아가는 동안 GUI 가 완전히 먹통됨 >> do_crawling 을 subprocess 로 작동 필요
-        crawler.do_crawling()
-        print('열려라 디버깅크롬크롬')
-            
+        t_crawler = threading.Thread(target=crawler.do_crawling, args=())
+        t_crawler.start()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

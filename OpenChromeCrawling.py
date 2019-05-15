@@ -199,9 +199,15 @@ class Crawler:
                         self.input_user_info("PASS")
                 except selenium.common.exceptions.NoSuchWindowException as e:
                     self.driver.switch_to.window(self.driver.window_handles[-1])
-                    print("윈도우 바꿈")
+                    print("*윈도우 바꿈")
+                except selenium.common.exceptions.WebDriverException as e:
+                    print("*크롬 종료")
+                    return
                 except BaseException as e:
-                    print(e)
+                    print("*BaseException : ", e)
+        except selenium.common.exceptions.WebDriverException as e:
+            print("*크롬 종료")
+            return
         except BaseException as e:
             print("*Error :", e)
             self.driver.close()
