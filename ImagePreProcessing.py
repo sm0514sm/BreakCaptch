@@ -39,8 +39,6 @@ class CaptchaImage:
 
     # 라인 삭제하기 (blur_pixel_delete 미리 해야함)
     def line_delete(self):
-        spe_h = 0
-
         # 다섯가지 색상만이 존재하는 special_height 구하기
         for y in range(5, self.height):
             self.color_lists = []
@@ -51,7 +49,6 @@ class CaptchaImage:
                              or self.origin_pixel[x, y] == self.origin_pixel[x - 2, y]):
                         self.color_lists.append(self.origin_pixel[x, y])
             if len(self.color_lists) == 5:
-                spe_h = y
                 break
 
         # color_lists 에 없는 색상 삭제, 있는 색상은 각 색상 별 최소 x 위치
@@ -64,7 +61,6 @@ class CaptchaImage:
                         if self.origin_pixel[x, y] == self.color_lists[i]:
                             self.color_most_left_list[i] = min(self.color_most_left_list[i], x)
                             self.color_most_right_list[i] = max(self.color_most_right_list[i], x)
-        return spe_h
 
     def character_separate(self):
         for i in range(5):

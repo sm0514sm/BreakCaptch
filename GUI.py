@@ -45,12 +45,12 @@ class LogInDialog(QDialog):
         # 콤보박스 - 내국인외국인
         self.rbtn1 = QRadioButton('내국인', self)
         self.rbtn2 = QRadioButton('외국인', self)
-        self.rbtn3 = QRadioButton('skt', self)
-        self.rbtn4 = QRadioButton('kt', self)
-        self.rbtn5 = QRadioButton('U+', self)
+        self.rbtn3 = QRadioButton('SKT', self)
+        self.rbtn4 = QRadioButton('KT', self)
+        self.rbtn5 = QRadioButton('LGT', self)
         self.rbtn6 = QRadioButton('알뜰폰', self)
-        self.rbtn7 = QRadioButton('남', self)
-        self.rbtn8 = QRadioButton('여', self)
+        self.rbtn7 = QRadioButton('남자', self)
+        self.rbtn8 = QRadioButton('여자', self)
         self.btg1 = QButtonGroup()
         self.btg1.addButton(self.rbtn1)
         self.btg1.addButton(self.rbtn2)
@@ -142,7 +142,7 @@ class MyWindow(QWidget):
         self.setupUI()
 
     def setupUI(self):
-        self.setGeometry(800, 200, 300, 300)
+        self.setGeometry(1000, 200, 300, 300)
         self.setWindowTitle("R U Robot")
         # self.setWindowIcon(QIcon('icon.png'))
 

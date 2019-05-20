@@ -10,6 +10,15 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
 
+# Highlights (blinks) a Selenium Webdriver element
+def highlight(element):
+    driver = element._parent
+
+    def apply_style(s):
+        driver.execute_script("arguments[0].setAttribute('style', arguments[1]);", element, s)
+    apply_style("background: yellow;")
+
+
 class Crawler:
     def __init__(self):
         self.successInput = False
@@ -41,6 +50,7 @@ class Crawler:
         try:
             ele = self.driver.find_element_by_id(ele_name)
             ele.send_keys(value)
+            highlight(ele)
             if ele_name == "captchaCode":
                 ele.click()
             return 1
@@ -182,7 +192,7 @@ class Crawler:
             # chrome_driver = "C:/Users/Cho/Documents/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
             chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"  # chrome_driver 위치
             self.driver = webdriver.Chrome(chrome_driver)
-
+#C:/Program Files (x86)/Google/Chrome/Application/chrome.exe
             while True:
                 try:
                     time.sleep(1)
@@ -201,12 +211,12 @@ class Crawler:
                     self.driver.switch_to.window(self.driver.window_handles[-1])
                     print("*윈도우 바꿈")
                 except selenium.common.exceptions.WebDriverException as e:
-                    print("*크롬 종료")
+                    print("*크롬 종료 :", e)
                     return
                 except BaseException as e:
                     print("*BaseException : ", e)
         except selenium.common.exceptions.WebDriverException as e:
-            print("*크롬 종료")
+            print("*크롬 종료 :", e)
             return
         except BaseException as e:
             print("*Error :", e)
