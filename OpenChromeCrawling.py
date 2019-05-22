@@ -9,6 +9,7 @@ from ImagePreProcessing import OneImageProcessingAndML
 from AudioPreprocessing import OneSoundProcessingAndML
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+import tttttt
 
 
 # Highlights (blinks) a Selenium Webdriver element
@@ -78,15 +79,24 @@ class Crawler:
                 value = captcha.get_attribute("value")
                 url = "https://memberssl.auction.co.kr/GCaptcha/CurrentSound?encValue=" + value
                 headers = {'User_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'}
-                # print(requests.get(url, headers=headers).text)
-                # urllib.request.urlretrieve(url, "captcha.wav")
-                opener = urllib.request.build_opener()
-                print(1111)
-                opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36')]
-                print(222)
-                urllib.request.install_opener(opener)
-                print(333)
-                urllib.request.urlretrieve(url, "captcha.wav")
+                cookie = 'pcid=1558356403914cguid=11558356403737005811000000; sguid=31558356403737005811274000; pguid=21558356403737005811010000; WMONID=P_D_sREpAj2; RPM=BT%3DL1558356410365; AGP=fccode=AH41; channelcode=0C42; ssguid=315585000520530047312740000; gen=1KRgroBk1H45VAtrQ0OlmeMHzynS41CcSzdnr8/0NuK5d/d556P5lMX4OjtRumv2AZID/DSU5M/zX+/xQUIxB7pPGqceA1rBRT3eoAB16fY='
+                referer = 'https://memberssl.auction.co.kr/Common/CustomizedVerification/VerifyIdentityByCellphone.aspx?nrequestseq=119525155&calltype=S&nexturl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119525155%26ctype%3dS%26mtype%3dZ&cancelurl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119525155%26ctype%3dS%26mtype%3dZ'
+                #          https://memberssl.auction.co.kr/Common/CustomizedVerification/VerifyIdentityByCellphone.aspx?nrequestseq=119532858&calltype=S&nexturl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119532858%26ctype%3dS%26mtype%3dZ&cancelurl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119532858%26ctype%3dS%26mtype%3dZ
+                referer = self.driver.current_url
+                print(referer)
+                header = {
+                    'Host': 'memberssl.auction.co.kr',
+                    'Connection': 'keep-alive',
+                    'Accept-Encoding': 'identity;q=1, *;q=0',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36',
+                    'chrome-proxy': 'frfr',
+                    'Accept': '*/*',
+                    'Referer': referer,
+                    'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': cookie,
+                    'Range': 'bytes=0-',
+                }
+                tttttt.aaa(url, referer)
             elif site == "PASS":
                 pass
             else:
