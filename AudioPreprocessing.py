@@ -42,7 +42,7 @@ class CaptchaAudio:
         alpha = self.pad_null(without_null=alpha)
         answer = self.add_on_answer(alpha=alpha, answer=answer)
         answer = answer[1:, :]
-        # np.savetxt('./' + 'asdfasdf' + '.csv', answer, header='Z', fmt='%d')
+        np.savetxt('./' + 'asdfasdf' + '.csv', answer, header='Z', fmt='%d')
         self.delete_listen_wav()
         return answer
 

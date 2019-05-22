@@ -9,7 +9,6 @@ from ImagePreProcessing import OneImageProcessingAndML
 from AudioPreprocessing import OneSoundProcessingAndML
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-import tttttt
 
 
 # Highlights (blinks) a Selenium Webdriver element
@@ -135,7 +134,6 @@ class Crawler:
                                   "carrier_sel", "cellphone_num", "captchaCode", "agreeInfoAllTop")
         elif site_name == "Auction":
             print("Auction 실행")
-            self.driver.find_element_by_class_name("bt_sound").click()   # 옥션의 경우, 사운드 버튼을 클릭해야지 얻을 수 있음
             # 옥션은 새창으로 팝업되기때문에 iframe 바꿀 필요 없음
             self.set_element_name("Auction", "name", "naSelect", "ssnLeft8", "sexSelect1", "sexSelect2",
                                   "carrierType", "cpNo", "captchaCode", "agreeInfoAllTop")

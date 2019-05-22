@@ -5,6 +5,12 @@ from OpenChromeCrawling import Crawler
 import threading
 
 
+# TODO 옳지 않은 입력형식 입력시 에러
+# TODO Chrome driver 위치 지정
+# TODO GUI 이쁘게?
+# TODO 
+
+
 # 개인정보입력 창
 class LogInDialog(QDialog):
     def __init__(self):
