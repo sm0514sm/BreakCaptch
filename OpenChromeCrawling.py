@@ -77,13 +77,9 @@ class Crawler:
                 # 음성의 경우, url 을 알아내서 접근하는 것인데 옥션의 경우, 직접접근을 막아두어서 접근 불가
                 captcha = self.driver.find_element_by_id("hidCaptcha")
                 value = captcha.get_attribute("value")
-                url = "https://memberssl.auction.co.kr/GCaptcha/CurrentSound?encValue=" + value
-                headers = {'User_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'}
-                cookie = 'pcid=1558356403914cguid=11558356403737005811000000; sguid=31558356403737005811274000; pguid=21558356403737005811010000; WMONID=P_D_sREpAj2; RPM=BT%3DL1558356410365; AGP=fccode=AH41; channelcode=0C42; ssguid=315585000520530047312740000; gen=1KRgroBk1H45VAtrQ0OlmeMHzynS41CcSzdnr8/0NuK5d/d556P5lMX4OjtRumv2AZID/DSU5M/zX+/xQUIxB7pPGqceA1rBRT3eoAB16fY='
-                referer = 'https://memberssl.auction.co.kr/Common/CustomizedVerification/VerifyIdentityByCellphone.aspx?nrequestseq=119525155&calltype=S&nexturl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119525155%26ctype%3dS%26mtype%3dZ&cancelurl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119525155%26ctype%3dS%26mtype%3dZ'
-                #          https://memberssl.auction.co.kr/Common/CustomizedVerification/VerifyIdentityByCellphone.aspx?nrequestseq=119532858&calltype=S&nexturl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119532858%26ctype%3dS%26mtype%3dZ&cancelurl=https%3a%2f%2fmemberssl.auction.co.kr%2fCommon%2fVerifyIdentityResult.aspx%3fnext%3dhttps%3a%2f%2fmemberssl.auction.co.kr%2fMembership%2fIDPW%2fFindID.aspx%26rseq%3diac119532858%26ctype%3dS%26mtype%3dZ
+                url = "https://memberssl.auction.co.kr/Common/GCaptcha/GCaptchaService.aspx?mtype=S&encvalue=" + value
                 referer = self.driver.current_url
-                print(referer)
+                cookie = 'pcid=1558356403914; cguid=11558356403737005811000000; sguid=31558356403737005811274000; pguid=21558356403737005811010000; WMONID=P_D_sREpAj2; RPM=BT%3DL1558356410365; AGP=fccode=AH41; channelcode=0C42; ssguid=315585000520530047312740000; gen=1KRgroBk1H45VAtrQ0OlmeMHzynS41CcSzdnr8/0NuK5d/d556P5lMX4OjtRumv2AZID/DSU5M/zX+/xQUIxB7pPGqceA1rBRT3eoAB16fY='
                 header = {
                     'Host': 'memberssl.auction.co.kr',
                     'Connection': 'keep-alive',
@@ -96,7 +92,9 @@ class Crawler:
                     'Cookie': cookie,
                     'Range': 'bytes=0-',
                 }
-                tttttt.aaa(url, referer)
+                r = requests.get(url=url, headers=header, verify=False)
+                print(r.content)
+                open("captcha.wav", 'wb').write(r.content)
             elif site == "PASS":
                 pass
             else:
@@ -214,10 +212,8 @@ class Crawler:
 
     def do_crawling(self):
         try:
-            # chrome_driver = "C:/Users/Cho/Documents/BreakCaptcha/chromedriver.exe"    # chrome_driver 위치
             chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"  # chrome_driver 위치
             self.driver = webdriver.Chrome(chrome_driver)
-#C:/Program Files (x86)/Google/Chrome/Application/chrome.exe
             while True:
                 try:
                     time.sleep(1)
@@ -235,6 +231,7 @@ class Crawler:
                 except selenium.common.exceptions.NoSuchWindowException as e:
                     self.driver.switch_to.window(self.driver.window_handles[-1])
                     print("*윈도우 바꿈")
+                    self.successInput = False
                 except selenium.common.exceptions.WebDriverException as e:
                     print("*크롬 종료 :", e)
                     return
