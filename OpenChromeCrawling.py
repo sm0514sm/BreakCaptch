@@ -3,6 +3,7 @@
 
 import time
 import urllib.request
+import requests
 import selenium
 from ImagePreProcessing import OneImageProcessingAndML
 from AudioPreprocessing import OneSoundProcessingAndML
@@ -32,6 +33,7 @@ class Crawler:
             "통신사": "carrier_sel",
             "휴대폰번호": "cellphone_num",
             "자동입력방지문자": "captchaCode",
+            "모두동의": None,
         }
         self.user_info = {
             "이름": "이상민",
@@ -75,6 +77,15 @@ class Crawler:
                 captcha = self.driver.find_element_by_id("hidCaptcha")
                 value = captcha.get_attribute("value")
                 url = "https://memberssl.auction.co.kr/GCaptcha/CurrentSound?encValue=" + value
+                headers = {'User_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'}
+                # print(requests.get(url, headers=headers).text)
+                # urllib.request.urlretrieve(url, "captcha.wav")
+                opener = urllib.request.build_opener()
+                print(1111)
+                opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36')]
+                print(222)
+                urllib.request.install_opener(opener)
+                print(333)
                 urllib.request.urlretrieve(url, "captcha.wav")
             elif site == "PASS":
                 pass
@@ -87,7 +98,7 @@ class Crawler:
 
     # HTML 가져올 element 의 tag 이름을 설정함
     def set_element_name(self, site, name, nationality, birth_date, gender_male, gender_female,
-                         mobile_carrier, mobile_number, captcha_character):
+                         mobile_carrier, mobile_number, captcha_character, agreeInfo):
         if site == self.element_name["사이트"]:  # 기존것과 동일하다면 스킵
             return
         self.element_name["사이트"] = site
@@ -99,6 +110,7 @@ class Crawler:
         self.element_name["통신사"] = mobile_carrier
         self.element_name["휴대폰번호"] = mobile_number
         self.element_name["자동입력방지문자"] = captcha_character
+        self.element_name["모두동의"] = agreeInfo
 
     # 사용자 정보 + 자동입력방지문자 입력
     def input_user_info(self, site_name):
@@ -112,18 +124,18 @@ class Crawler:
                 self.successInput = False
                 return
             self.set_element_name("Gmarket", "u_name", "naSelect", "birth_date", "gender_male", "gender_female",
-                                  "carrier_sel", "cellphone_num", "captchaCode")
+                                  "carrier_sel", "cellphone_num", "captchaCode", "agreeInfoAllTop")
         elif site_name == "Auction":
             print("Auction 실행")
             self.driver.find_element_by_class_name("bt_sound").click()   # 옥션의 경우, 사운드 버튼을 클릭해야지 얻을 수 있음
             # 옥션은 새창으로 팝업되기때문에 iframe 바꿀 필요 없음
             self.set_element_name("Auction", "name", "naSelect", "ssnLeft8", "sexSelect1", "sexSelect2",
-                                  "carrierType", "cpNo", "captchaCode")
+                                  "carrierType", "cpNo", "captchaCode", "agreeInfoAllTop")
         elif site_name == "PASS":
             print("PASS 휴대폰 본인확인 실행")
             # 옥션은 새창으로 팝업되기때문에 iframe 바꿀 필요 없음
             self.set_element_name("PASS", "smsName", "native", "smsBirth", "m_sel", "fm_sel",
-                                  None, "smsMobileNum", "s_secureText")
+                                  None, "smsMobileNum", "s_secureText", None)
             pass
         else:
             print("*Error : 알 수 없는 사이트")
@@ -171,6 +183,9 @@ class Crawler:
                 print("자동입력방지문자 입력 실패")
                 return
             self.successInput = True
+
+            if self.element_name["모두동의"] is not None:
+                self.driver.find_element_by_id(self.element_name["모두동의"]).click()
 
     # 유저 정보를 설정함
     def set_user_info(self, name, nationality, birth_date, gender, mobile_carrier, mobile_number, string):
