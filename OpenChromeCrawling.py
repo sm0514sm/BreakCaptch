@@ -11,6 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
 
+
 # Highlights (blinks) a Selenium Webdriver element
 def highlight(element):
     driver = element._parent
@@ -45,6 +46,7 @@ class Crawler:
             "자동입력방지문자": "",
         }
         self.driver = None
+        self.driver_path = ""
 
     # element_name 에 value 를 입력
     # 성공 1, 실패 0
@@ -210,7 +212,10 @@ class Crawler:
 
     def do_crawling(self):
         try:
-            chrome_driver = "C:/Users/LGPC/Desktop/상민/BreakCaptcha/chromedriver.exe"  # chrome_driver 위치
+            if self.driver_path == "":
+                chrome_driver = "./chromedriver.exe"  # chrome_driver defalut 위치
+            else:
+                chrome_driver = self.driver_path
             self.driver = webdriver.Chrome(chrome_driver)
             while True:
                 try:
@@ -230,13 +235,16 @@ class Crawler:
                     self.driver.switch_to.window(self.driver.window_handles[-1])
                     print("*윈도우 바꿈")
                     self.successInput = False
+                except selenium.common.exceptions.UnexpectedAlertPresentException as e:
+                    print("Unexpected Alert")
+                    continue
                 except selenium.common.exceptions.WebDriverException as e:
                     print("*크롬 종료 :", e)
                     return
                 except BaseException as e:
                     print("*BaseException : ", e)
         except selenium.common.exceptions.WebDriverException as e:
-            print("*크롬 종료 :", e)
+            print("*do 크롬 종료 :", e)
             return
         except BaseException as e:
             print("*Error :", e)

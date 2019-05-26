@@ -4,7 +4,6 @@ from PyQt5.QtGui import *
 from OpenChromeCrawling import Crawler
 import threading
 
-
 # TODO 옳지 않은 입력형식 입력시 에러
 # TODO Chrome driver 위치 지정
 # TODO GUI 이쁘게?
@@ -158,7 +157,14 @@ class MyWindow(QWidget):
 
     def pushButtonClicked(self):
         fname = QFileDialog.getOpenFileName(self)
-        self.label2.setText(fname[0])
+        print(fname[0][-10:])
+        if fname[0][-10:] != "driver.exe":
+            self.label2.setText("크롬 드라이버 위치 설정 오류")
+            crawler.driver_path = "ERROR"
+            print("크롬 드라이버 위치 설정 오류")
+        else:
+            self.label2.setText(fname[0])
+            crawler.driver_path = self.label2.text()
 
     # 개인정보 입력 창 띄우기
     def openPersonalInformation(self):
