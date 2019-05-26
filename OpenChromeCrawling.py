@@ -98,6 +98,9 @@ class Crawler:
                 open("captcha.wav", 'wb').write(r.content)
             elif site == "PASS":
                 pass
+            elif site == "DANAL":
+                # TODO 다날일 때 자동입력방지문자 이미지 데이터 수집하는 과정 추가
+                print("다날 실행")
             else:
                 print("*Error : 알 수 없는 페이지")
             return 1
@@ -145,6 +148,9 @@ class Crawler:
             self.set_element_name("PASS", "smsName", "native", "smsBirth", "m_sel", "fm_sel",
                                   None, "smsMobileNum", "s_secureText", None)
             pass
+        elif site_name == "DANAL":
+            # TODO 다날일 때 HTML TAG 값 입력
+            print("다날 실행")
         else:
             print("*Error : 알 수 없는 사이트")
             return
@@ -231,6 +237,8 @@ class Crawler:
                         self.input_user_info("Auction")
                     elif "mobile-ok.com/SimplePop" in current_url:
                         self.input_user_info("PASS")
+                    elif "Danal" in current_url:
+                        self.input_user_info("DANAL")
                 except selenium.common.exceptions.NoSuchWindowException as e:
                     self.driver.switch_to.window(self.driver.window_handles[-1])
                     print("*윈도우 바꿈")
