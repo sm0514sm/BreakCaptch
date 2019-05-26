@@ -23,8 +23,6 @@ class LogInDialog(QDialog):
         self.sex = None
         self.nation = None
         self.agency = None
-        self.chrome = None
-        self.driver = None
 
     def setupUI(self):
         self.setGeometry(1100, 200, 1000, 100)
@@ -35,10 +33,8 @@ class LogInDialog(QDialog):
         label1 = QLabel("이름: ")
         label2 = QLabel("생년월일: ")
         label3 = QLabel("휴대폰번호: ")
-        label4 = QLabel("Chrome.exe 경로: ")
-        label5 = QLabel("Chromedriver.exe 경로: ")
-        label6 = QLabel("국적")
-        label8 = QLabel("통신사")
+        label8 = QLabel("국적")
+        label6 = QLabel("통신사")
         label7 = QLabel("성별")
         self.label6 = QLabel('', self)
         self.label6.move(50, 150)
@@ -46,8 +42,6 @@ class LogInDialog(QDialog):
         self.lineEdit1 = QLineEdit()
         self.lineEdit2 = QLineEdit()
         self.lineEdit3 = QLineEdit()
-        self.lineEdit4 = QLineEdit()
-        self.lineEdit5 = QLineEdit()
         # 콤보박스 - 내국인외국인
         self.rbtn1 = QRadioButton('내국인', self)
         self.rbtn2 = QRadioButton('외국인', self)
@@ -85,12 +79,8 @@ class LogInDialog(QDialog):
         layout.addWidget(self.lineEdit3, 2, 1)
         layout.addWidget(self.rbtn3, 6, 0)
         layout.addWidget(self.rbtn4, 6, 1)
-        layout.addWidget(label4, 3, 0)
-        layout.addWidget(self.lineEdit4, 3, 1)
         layout.addWidget(self.rbtn5, 6, 2)
         layout.addWidget(self.rbtn6, 6, 4)
-        layout.addWidget(label5, 4, 0)
-        layout.addWidget(self.lineEdit5, 4, 1)
         layout.addWidget(self.pushButton1, 7, 0)
         self.setLayout(layout)
 
@@ -105,8 +95,6 @@ class LogInDialog(QDialog):
             if (i == 3): self.agency = line
             if (i == 4): self.password = line
             if (i == 5): self.phone = line
-            if (i == 6): self.chrome = line
-            if (i == 7): self.driver = line
 
         info.close()
 
@@ -114,8 +102,6 @@ class LogInDialog(QDialog):
         self.id = self.lineEdit1.text()
         self.password = self.lineEdit2.text()
         self.phone = self.lineEdit3.text()
-        self.chrome = self.lineEdit4.text()
-        self.driver = self.lineEdit5.text()
         if self.rbtn1.isChecked():
             self.nation = self.rbtn1.text()
         else:
@@ -157,13 +143,22 @@ class MyWindow(QWidget):
         self.pushButton2 = QPushButton("크롬 열기")
         self.pushButton2.clicked.connect(self.openCrome)
         self.label = QLabel()
+        self.pushButton3 = QPushButton("chromdriver.exe 경로 설정")
+        self.label2 = QLabel("드라이버 경로 미설정")
+        self.pushButton3.clicked.connect(self.pushButtonClicked)
 
         layout = QVBoxLayout()
         layout.addWidget(self.pushButton1)
         layout.addWidget(self.pushButton2)
+        layout.addWidget(self.pushButton3)
         layout.addWidget(self.label)
+        layout.addWidget(self.label2)
 
         self.setLayout(layout)
+
+    def pushButtonClicked(self):
+        fname = QFileDialog.getOpenFileName(self)
+        self.label2.setText(fname[0])
 
     # 개인정보 입력 창 띄우기
     def openPersonalInformation(self):
@@ -175,14 +170,11 @@ class MyWindow(QWidget):
         agency = dlg.agency
         password = dlg.password
         phone = dlg.phone
-        chrome = dlg.chrome
-        driver = dlg.driver
         f = open('test.txt', 'wt', encoding='utf-8')
         self.label.setText(
-            "name: %s\nnationality : %s\nbirth: %s\nsex : %s\nagency : %s\nphone: %s\nchrome.exe : %s\nchromedriver.exe : %s" % (
-            id, nation, password, sex, agency, phone, chrome, driver))
-        print(id, "\n", sex, "\n", nation, "\n", agency, "\n", password, "\n", phone, "\n", chrome, "\n", driver,
-              file=f)
+            "name: %s\nnationality : %s\nbirth: %s\nsex : %s\nagency : %s\nphone: %s" % (
+            id, nation, password, sex, agency, phone))
+        print(id, "\n", sex, "\n", nation, "\n", agency, "\n", password, "\n", phone, file=f)
         f.close()
 
     # 크롬 열기
