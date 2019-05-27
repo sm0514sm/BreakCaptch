@@ -3,7 +3,10 @@
 
 
 import sys
+
+from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 from OpenChromeCrawling import Crawler
 import threading
 
@@ -43,7 +46,13 @@ class LogInDialog(QDialog):
 
         self.lineEdit1 = QLineEdit()
         self.lineEdit2 = QLineEdit()
-        self.lineEdit3 = QLineEdit()
+        birth = QRegExp("^(19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[0-1])$")
+        birth_Validator = QRegExpValidator(birth, self)
+        self.lineEdit2.setValidator((birth_Validator))
+        self.lineEdit3 = QLineEdit("010")
+        hp = QRegExp("010[0-9]{4}[0-9]{4}")
+        hp_Validator = QRegExpValidator(hp, self)
+        self.lineEdit3.setValidator(hp_Validator)
         # 콤보박스 - 내국인외국인
         self.rbtn1 = QRadioButton('내국인', self)
         self.rbtn2 = QRadioButton('외국인', self)
