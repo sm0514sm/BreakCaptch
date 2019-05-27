@@ -1,6 +1,9 @@
+# 실행파일 생성 : pyinstaller --hidden-import sklearn.neighbors.typedefs -w -F --icon=robot.ico GUI.py
+# 실행시킬때 GUI.exe 와 같은 폴더에 SoundModel.pkl 이 있어야 함
+
+
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
 from OpenChromeCrawling import Crawler
 import threading
 

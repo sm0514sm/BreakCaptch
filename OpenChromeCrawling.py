@@ -5,7 +5,7 @@ import time
 import urllib.request
 import requests
 import selenium
-from ImagePreProcessing import OneImageProcessingAndML
+# from ImagePreProcessing import OneImageProcessingAndML
 from AudioPreprocessing import OneSoundProcessingAndML
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select

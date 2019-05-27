@@ -1,7 +1,6 @@
 from PIL import Image
 import os
 from DoMachineLearning import ImageMachine
-import pandas
 import time
 
 CLEAR = (0, 0, 0, 0)            # 투명

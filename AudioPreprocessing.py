@@ -1,5 +1,3 @@
-from pydub import AudioSegment #음성 편집
-import wave
 import os  # 디렉터리 생성
 import numpy as np
 from scipy.io.wavfile import read
