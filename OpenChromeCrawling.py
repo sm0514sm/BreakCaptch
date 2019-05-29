@@ -9,8 +9,7 @@ import selenium
 from AudioPreprocessing import OneSoundProcessingAndML
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-
-
+import threading
 
 # Highlights (blinks) a Selenium Webdriver element
 def highlight(element):
@@ -23,8 +22,9 @@ def highlight(element):
 
 class Crawler:
     def __init__(self):
-        self.successInput = False
-        self.element_name = {
+        self.successInput = False   # 현재 페이지에서 자동입력 수행을 했는지 확인
+        self.isInputSuccess = True  # 자동화 입력 실패한 element 있는지 확인
+        self.element_name = {       # 사이트마다 다른 HTML 태그 대응
             "사이트": "Gmarket",
             "이름": "u_name",
             "국적": "naSelect",
@@ -36,7 +36,7 @@ class Crawler:
             "자동입력방지문자": "captchaCode",
             "모두동의": None,
         }
-        self.user_info = {
+        self.user_info = {          # 사용자의 정보 대응
             "이름": "이상민",
             "국적": "외국인",
             "생년월일": "19950516",
@@ -59,7 +59,8 @@ class Crawler:
                 ele.click()
             return 1
         except BaseException as e:
-            print(e)
+            self.isInputSuccess = False
+            print("input_element ERROR : ", ele_name, e)
             return 0
 
     # 자동입력방지문자의 이미지와 음성 파일을 다운로드
@@ -80,7 +81,10 @@ class Crawler:
                 value = captcha.get_attribute("value")
                 url = "https://memberssl.auction.co.kr/Common/GCaptcha/GCaptchaService.aspx?mtype=S&encvalue=" + value
                 referer = self.driver.current_url
-                cookie = 'pcid=1558356403914; cguid=11558356403737005811000000; sguid=31558356403737005811274000; pguid=21558356403737005811010000; WMONID=P_D_sREpAj2; RPM=BT%3DL1558356410365; AGP=fccode=AH41; channelcode=0C42; ssguid=315585000520530047312740000; gen=1KRgroBk1H45VAtrQ0OlmeMHzynS41CcSzdnr8/0NuK5d/d556P5lMX4OjtRumv2AZID/DSU5M/zX+/xQUIxB7pPGqceA1rBRT3eoAB16fY='
+                cookie = 'pcid=1558356403914; cguid=11558356403737005811000000; sguid=31558356403737005811274000;' \
+                         'pguid=21558356403737005811010000; WMONID=P_D_sREpAj2; RPM=BT%3DL1558356410365;' \
+                         'AGP=fccode=AH41;channelcode=0C42; ssguid=315585000520530047312740000;' \
+                         'gen=1KRgroBk1H45VAtrQ0OlmeMHzynS41CcSzdnr8/0NuK5d/d556P5lMX4OjtRumv2AZID/DSU5M/zX+/xQUIxB7pPGqceA1rBRT3eoAB16fY='
                 header = {
                     'Host': 'memberssl.auction.co.kr',
                     'Connection': 'keep-alive',
@@ -94,7 +98,6 @@ class Crawler:
                     'Range': 'bytes=0-',
                 }
                 r = requests.get(url=url, headers=header, verify=False)
-                print(r.content)
                 open("captcha.wav", 'wb').write(r.content)
             elif site == "PASS":
                 pass
@@ -103,6 +106,11 @@ class Crawler:
                 print("다날 실행")
             else:
                 print("*Error : 알 수 없는 페이지")
+            self.user_info["자동입력방지문자"] = OneSoundProcessingAndML()  # 사운드로 머신러닝
+            t_inputCaptcha = threading.Thread(target=self.input_element,
+                                              args=(self.element_name["자동입력방지문자"], self.user_info["자동입력방지문자"]))
+            t_inputCaptcha.start()
+            t_inputCaptcha.join()
             return 1
         except BaseException as e:
             print("*get_Captcha_image:", e)
@@ -155,24 +163,24 @@ class Crawler:
             print("*Error : 알 수 없는 사이트")
             return
 
+        # ------------- 자동 입력 -------------- #
         if self.successInput is False:
-            if not self.get_Captcha_image(site_name):
-                print("Captcha 이미지 다운로드 실패")
-            # user_info["자동입력방지문자"] = OneImageProcessingAndML()     # 이미지로 머신러닝
-            self.user_info["자동입력방지문자"] = OneSoundProcessingAndML()       # 사운드로 머신러닝
-            print("user_info 입력")
+            self.isInputSuccess = True
+            t_getCaptcha = threading.Thread(target=self.get_Captcha_image, args=(site_name,))
+            t_inputName = threading.Thread(target=self.input_element,
+                                           args=(self.element_name["이름"], self.user_info["이름"]))
+            t_inputBirth = threading.Thread(target=self.input_element,
+                                            args=(self.element_name["생년월일"], self.user_info["생년월일"]))
+            t_inputPhone = threading.Thread(target=self.input_element,
+                                            args=(self.element_name["휴대폰번호"], self.user_info["휴대폰번호"]))
 
-            if not self.input_element(self.element_name["이름"], self.user_info["이름"]):
-                print("이름 입력 실패")
-                return
+            t_getCaptcha.start()
+            t_inputName.start()
+            t_inputBirth.start()
+            t_inputPhone.start()
 
             select = Select(self.driver.find_element_by_id(self.element_name["국적"]))
             select.select_by_visible_text(self.user_info["국적"])
-
-            if not self.input_element(self.element_name["생년월일"], self.user_info["생년월일"]):
-                print("생년월일 입력 실패")
-                return
-
             if self.element_name["성별남"] is not None and self.element_name["성별여"] is not None:
                 try:
                     if self.user_info["성별"] == "남자":
@@ -184,22 +192,20 @@ class Crawler:
                         self.driver.find_element_by_class_name(self.element_name["성별남"]).click()
                     else:
                         self.driver.find_element_by_class_name(self.element_name["성별여"]).click()
-
             if self.element_name["통신사"] is not None:
                 select = Select(self.driver.find_element_by_id(self.element_name["통신사"]))
                 select.select_by_visible_text(self.user_info["통신사"])
-
-            if not self.input_element(self.element_name["휴대폰번호"], self.user_info["휴대폰번호"]):
-                print("휴대폰 번호 입력 실패")
-                return
-
-            if not self.input_element(self.element_name["자동입력방지문자"], self.user_info["자동입력방지문자"]):
-                print("자동입력방지문자 입력 실패")
-                return
-            self.successInput = True
-
             if self.element_name["모두동의"] is not None:
                 self.driver.find_element_by_id(self.element_name["모두동의"]).click()
+
+            t_getCaptcha.join()
+            t_inputName.join()
+            t_inputBirth.join()
+            t_inputPhone.join()
+
+            if self.isInputSuccess is False:
+                print("*ERROR : 자동입력 방지 문자 오류")
+            self.successInput = True
 
     # 유저 정보를 설정함
     def set_user_info(self, name, nationality, birth_date, gender, mobile_carrier, mobile_number, string):
@@ -218,7 +224,7 @@ class Crawler:
 
     def do_crawling(self):
         try:
-            if self.driver_path == "":
+            if self.driver_path == "" or self.driver_path is None:
                 chrome_driver = "./chromedriver.exe"  # chrome_driver defalut 위치
             else:
                 chrome_driver = self.driver_path
@@ -227,7 +233,9 @@ class Crawler:
                 try:
                     time.sleep(1)
                     current_url = self.driver.current_url
-                    self.driver.switch_to.window(self.driver.window_handles[-1])
+                    if self.driver.current_window_handle != self.driver.window_handles[-1]:
+                        self.driver.switch_to.window(self.driver.window_handles[-1])
+                    # self.driver.switch_to.window(self.driver.current_window_handle)
                     print("-----------------------------------------------------")
                     print("*url : ", self.driver.current_url)
                     print("*successInput :", self.successInput)
@@ -251,11 +259,15 @@ class Crawler:
                     return
                 except BaseException as e:
                     print("*BaseException : ", e)
+        except selenium.common.exceptions.SessionNotCreatedException as e:
+            print("*크롬드라이버 버전 오류")
+            return
         except selenium.common.exceptions.WebDriverException as e:
             print("*do 크롬 종료 :", e)
             return
         except BaseException as e:
             print("*Error :", e)
-            self.driver.close()
+            if self.driver is not None:
+                self.driver.close()
             exit()
 

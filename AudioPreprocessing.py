@@ -66,6 +66,7 @@ def OneSoundProcessingAndML():
     audio = pre.cut_by_null(hey_audio=read('./' + "captcha" + '.wav'))
     audio = audio.T
     result = SoundMachine.DoMLOneSound("SoundModel.pkl", audio)
+    print("예측결과 = ", result)
     return result[0] + result[1] + result[2] + result[3] + result[4]
 
 
