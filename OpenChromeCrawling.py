@@ -263,6 +263,8 @@ class Crawler:
             print("*크롬드라이버 버전 오류")
             return
         except selenium.common.exceptions.WebDriverException as e:
+            print("요거" + chrome_driver + "\n")
+            print("요거" + self.driver_path + "\n")
             print("*do 크롬 종료 :", e)
             return
         except BaseException as e:

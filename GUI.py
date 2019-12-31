@@ -7,8 +7,11 @@ import sys
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
+from PyQt5 import uic
 from OpenChromeCrawling import Crawler
 import threading
+import webbrowser
+
 
 # TODO 옳지 않은 입력형식 입력시 에러
 # TODO Chrome driver 위치 지정
@@ -20,7 +23,7 @@ import threading
 class LogInDialog(QDialog):
     def __init__(self):
         super().__init__()
-        #self.refresh()
+        # self.refresh()
         self.setupUI()
         self.id = None
         self.password = None
@@ -30,7 +33,7 @@ class LogInDialog(QDialog):
         self.agency = None
 
     def setupUI(self):
-        self.setGeometry(1100, 200, 1000, 100)
+        self.setGeometry(1100, 200, 500, 500)
         self.setWindowTitle("개인정보 입력")
         # self.setWindowIcon(QIcon('icon.png'))
 
@@ -70,7 +73,7 @@ class LogInDialog(QDialog):
         self.btg2.addButton(self.rbtn8)
         # 라디오버튼 - 남여
         # 확인 버튼
-        self.pushButton1= QPushButton("확인")
+        self.pushButton1 = QPushButton("확인")
         self.pushButton1.clicked.connect(self.pushButtonClicked)
 
         layout = QGridLayout()
@@ -97,15 +100,21 @@ class LogInDialog(QDialog):
 
     def refresh(self):
         i = 0
-        while (i < 10):
+        while i < 10:
             info = open('test.txt', 'r', encoding="utf8")
             line = info.readline()
-            if (i == 0): self.id = line
-            if (i == 1): self.sex = line
-            if (i == 2): self.nation = line
-            if (i == 3): self.agency = line
-            if (i == 4): self.password = line
-            if (i == 5): self.phone = line
+            if i == 0:
+                self.id = line
+            if i == 1:
+                self.sex = line
+            if i == 2:
+                self.nation = line
+            if i == 3:
+                self.agency = line
+            if i == 4:
+                self.password = line
+            if i == 5:
+                self.phone = line
 
         info.close()
 
@@ -121,84 +130,84 @@ class LogInDialog(QDialog):
         if self.rbtn3.isChecked():
             self.agency = self.rbtn3.text()
         elif self.rbtn4.isChecked():
-                self.agency = self.rbtn4.text()
+            self.agency = self.rbtn4.text()
         elif self.rbtn5.isChecked():
-                self.agency = self.rbtn5.text()
+            self.agency = self.rbtn5.text()
         elif self.rbtn6.isChecked():
-                self.agency = self.rbtn6.text()
+            self.agency = self.rbtn6.text()
         if self.rbtn7.isChecked():
             self.sex = self.rbtn7.text()
         else:
             if self.rbtn8.isChecked():
                 self.sex = self.rbtn8.text()
-
-        #self.nation = self.text1
-        #self.agency = self.text2
+        # self.nation = self.text1
+        # self.agency = self.text2
         crawler.set_user_info(self.id, self.nation, self.password, self.sex, self.agency, self.phone, 0)
         self.close()
 
 
-# 메인창
-class MyWindow(QWidget):
+# about창
+class AboutWindow(QDialog, uic.loadUiType("about.ui")[0]):
     def __init__(self):
         super().__init__()
-        self.setupUI()
+        self.setupUi(self)
+        print("일단 들어옴")
+        self.linkButton.clicked.connect(self.openGit)
+        self.pushButton.clicked.connect(self.close)
 
-    def setupUI(self):
-        self.setGeometry(1000, 200, 300, 300)
-        self.setWindowTitle("R U Robot")
-        # self.setWindowIcon(QIcon('icon.png'))
+    def openGit(self):
+        print('opengit')
+        webbrowser.open("https://github.com/sm0514sm/BreakCaptcha")
 
-        self.pushButton1 = QPushButton("개인정보 입력")
-        self.pushButton1.clicked.connect(self.openPersonalInformation)
-        self.pushButton2 = QPushButton("크롬 열기")
-        self.pushButton2.clicked.connect(self.openCrome)
-        self.label = QLabel()
-        self.pushButton3 = QPushButton("chromdriver.exe 경로 설정")
-        self.label2 = QLabel("드라이버 경로 미설정")
-        self.pushButton3.clicked.connect(self.pushButtonClicked)
 
-        layout = QVBoxLayout()
-        layout.addWidget(self.pushButton1)
-        layout.addWidget(self.pushButton2)
-        layout.addWidget(self.pushButton3)
-        layout.addWidget(self.label)
-        layout.addWidget(self.label2)
-
-        self.setLayout(layout)
+# 메인창
+class MyWindow(QWidget, uic.loadUiType("gui.ui")[0]):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.personInfoSetButton.clicked.connect(self.openPersonalInformation)
+        self.openChromeButton.clicked.connect(self.openCrome)
+        self.chromeSetButton.clicked.connect(self.pushButtonClicked)
+        self.aboutButton.clicked.connect(self.openAbout)
+        self.exitButton.clicked.connect(self.close)
 
     def pushButtonClicked(self):
         fname = QFileDialog.getOpenFileName(self)
-        print(fname[0][-10:])
-        if fname[0][-10:] != "driver.exe":
-            self.label2.setText("크롬 드라이버 위치 설정 오류")
+        print(fname[0])
+        print("driver" in fname[0])
+        if "driver" not in fname[0]:
+            self.chromeLabel.setText("크롬드라이버 : 위치 설정 오류")
             crawler.driver_path = "ERROR"
             print("크롬 드라이버 위치 설정 오류")
         else:
-            self.label2.setText(fname[0])
-            crawler.driver_path = self.label2.text()
+            self.chromeLabel.setText(fname[0])
+            crawler.driver_path = self.chromeLabel.text()
 
     # 개인정보 입력 창 띄우기
     def openPersonalInformation(self):
         dlg = LogInDialog()
         dlg.exec_()
+        print("여긴됨")
         id = dlg.id
         sex = dlg.sex
         nation = dlg.nation
         agency = dlg.agency
         password = dlg.password
         phone = dlg.phone
-        f = open('test.txt', 'wt', encoding='utf-8')
-        self.label.setText(
-            "name: %s\nnationality : %s\nbirth: %s\nsex : %s\nagency : %s\nphone: %s" % (
-            id, nation, password, sex, agency, phone))
-        print(id, "\n", sex, "\n", nation, "\n", agency, "\n", password, "\n", phone, file=f)
-        f.close()
+        print("여긴됨")
+        self.userLabel.setText("name: %s, nationality : %s, birth: %s, sex : %s, agency : %s, phone: %s"
+            % (id, nation, password, sex, agency, phone))
 
     # 크롬 열기
     def openCrome(self):
         t_crawler = threading.Thread(target=crawler.do_crawling, args=())
         t_crawler.start()
+
+    def openAbout(self):
+        print('여기된')
+        dlg = AboutWindow()
+        dlg.exec_()
+        pass
 
 
 if __name__ == "__main__":
