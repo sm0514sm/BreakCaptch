@@ -1,4 +1,4 @@
-# BreakCaptcha
+# Break Captcha
 
 <img src="rsc/README/%EC%9E%90%EB%8F%99%EC%9E%85%EB%A0%A5.gif" width="400px" />
 
