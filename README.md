@@ -4,7 +4,7 @@
 
 Break Captcha v1.1
 
-[다운로드]: https://github.com/sm0514sm/BreakCaptcha/raw/master/Captcha%20Breaker.exe
+[다운로드]: https://github.com/sm0514sm/BreakCaptcha/raw/master/Captcha%20Breaker.exe	"다운로드"
 
 
 
