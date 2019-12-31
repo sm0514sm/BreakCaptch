@@ -2,13 +2,15 @@
 
 <img src="rsc/README/%EC%9E%90%EB%8F%99%EC%9E%85%EB%A0%A5.gif" width="400px" />
 
-Break Captcha v1.1
+- **Break Captcha** v1.1 [다운로드](https://github.com/sm0514sm/BreakCaptcha/raw/master/Captcha%20Breaker.exe)
+- **Sound Model** [다운로드](https://github.com/sm0514sm/BreakCaptcha/raw/master/SoundModel.pkl) (BreakCaptcha.exe와 같은 폴더에 존재해야 함)
+- **Chrome Driver** [다운로드](https://chromedriver.chromium.org/downloads) (현재 크롬과 동일한 버전 설치 후 지정)
 
-[다운로드]: https://github.com/sm0514sm/BreakCaptcha/raw/master/Captcha%20Breaker.exe	"다운로드"
 
 
 
-### 개요
+
+## 개요
 
  Captcha (Completely Automated Public Turing test to tell Computers and Humans Apart, 이하 캡챠)는 HIP기술의 일종으로, 어떠한 사용자가 실제 사람인지 컴퓨터 프로그램인지를 구별하기 위해 사용되는 방법이다. 사람은 구별할 수 있지만 컴퓨터는 구별하기 힘들게 의도적으로 비틀거나 덧칠한 그림이나 숫자나 텍스트를 읽어주는 오디오를 주고 그 내용을 물어보는 방법이 사용된다. 현재 로그인시나 본인인증시에 널리 사용되고있다. 
 
@@ -18,7 +20,9 @@ Break Captcha v1.1
 
 
 
-### 시스템 구조 (Context Diagram)
+
+
+## 시스템 구조 (Context Diagram)
 
 ![1577794897527](rsc/README/1577794897527.png)
 
@@ -35,9 +39,11 @@ Break Captcha v1.1
 
 
 
-### 동작 과정
 
-#### 1. 메인 화면
+
+## 동작 과정
+
+### 1. 메인 화면
 
 ![main](rsc/README/main.png)
 
@@ -45,7 +51,7 @@ Break Captcha v1.1
 
 
 
-#### 2. 사용자 정보 설정
+### 2. 사용자 정보 설정
 
 ![user](rsc/README/user.png)
 
@@ -53,19 +59,19 @@ Break Captcha v1.1
 
 
 
-#### 3. 크롬드라이버 위치 지정
+### 3. 크롬드라이버 위치 지정
 
 `크롬드라이버 설정`버튼을 클릭해서 크롬 버전과 동일한 크롬드라이버를 설치하여 경로를 지정해둔다.
 
 
 
-#### 4. 크롬 실행
+### 4. 크롬 실행
 
 `크롬 실행` 버튼을 클릭해 인터넷 서핑을 한다.
 
 
 
-#### 5. Captcha 파훼
+### 5. Captcha 파훼
 
 본 프로그램이 작동할 수 있는 사이트를 인식하면 다음과 같이 자동으로 Captcha문자와 사용자 정보가 입력된다.
 
@@ -73,7 +79,11 @@ Break Captcha v1.1
 
 
 
+
+
 ---
+
+
 
 > **Developed by** 아주대학교 - 사이버보안학과 (이상민, 김형호, 송연주, 조영준)
 >
