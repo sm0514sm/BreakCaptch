@@ -1,5 +1,13 @@
 # BreakCaptcha
 
+<img src="rsc/README/%EC%9E%90%EB%8F%99%EC%9E%85%EB%A0%A5.gif" width="400px" />
+
+Break Captcha v1.1
+
+[다운로드]: https://github.com/sm0514sm/BreakCaptcha/raw/master/Captcha%20Breaker.exe
+
+
+
 ### 개요
 
  Captcha (Completely Automated Public Turing test to tell Computers and Humans Apart, 이하 캡챠)는 HIP기술의 일종으로, 어떠한 사용자가 실제 사람인지 컴퓨터 프로그램인지를 구별하기 위해 사용되는 방법이다. 사람은 구별할 수 있지만 컴퓨터는 구별하기 힘들게 의도적으로 비틀거나 덧칠한 그림이나 숫자나 텍스트를 읽어주는 오디오를 주고 그 내용을 물어보는 방법이 사용된다. 현재 로그인시나 본인인증시에 널리 사용되고있다. 
@@ -61,9 +69,7 @@
 
 본 프로그램이 작동할 수 있는 사이트를 인식하면 다음과 같이 자동으로 Captcha문자와 사용자 정보가 입력된다.
 
-![자동입력](rsc/README/%EC%9E%90%EB%8F%99%EC%9E%85%EB%A0%A5.gif)
-
-
+<img src="rsc/README/%EC%9E%90%EB%8F%99%EC%9E%85%EB%A0%A5.gif" width="500px" />
 
 
 
